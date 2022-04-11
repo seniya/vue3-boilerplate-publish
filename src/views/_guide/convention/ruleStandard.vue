@@ -102,16 +102,18 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
-export default {
-  mounted () {
-    Prism.highlightAll()
-  }
-}
-</script>
+import { defineComponent, onMounted } from 'vue'
 
-<style lang="scss">
-@import "@/assets/scss/guide.scss";
-</style>
+export default defineComponent({
+  name: 'rule-standard',
+  components: {},
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+  }
+})
+</script>

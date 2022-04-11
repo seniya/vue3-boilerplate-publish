@@ -516,6 +516,21 @@
   </div>
 </template>
 
+<script lang="ts">
+import Prism from 'prismjs'
+import { defineComponent, onMounted } from 'vue'
+
+export default defineComponent({
+  name: 'libs-radio',
+  components: { },
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+  }
+})
+</script>
+
 <script>
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'

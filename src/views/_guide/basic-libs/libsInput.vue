@@ -6787,28 +6787,29 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
-import 'prismjs/themes/prism.css'
-export default {
-  data () {
-    return {
-      selectedValue: '1'
-    }
+import { defineComponent, onMounted } from 'vue'
+
+import Icon from '@/components/uu-components/Icon.vue'
+import Tooltip from '@/components/uu-components/Tooltip.vue'
+
+export default defineComponent({
+  name: 'libs-input',
+  components: {
+    'uu-icon': Icon,
+    'uu-tooltip': Tooltip
   },
-  mounted () {
-    Prism.highlightAll()
-  },
-  methods: {
-    changeValue (newValue) {
-      this.selectedValue = newValue
-    }
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/guide.scss";
+  @import "@/assets/scss/guide.scss";
   h4 {
     margin-top: 2rem;
     margin-bottom: 1rem;

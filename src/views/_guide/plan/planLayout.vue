@@ -128,18 +128,23 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
-export default {
-  mounted () {
-    Prism.highlightAll()
+import { defineComponent, onMounted } from 'vue'
+
+export default defineComponent({
+  name: 'plan-layout',
+  components: {},
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/scss/guide.scss";
   .ly-box {
     padding: 1.6rem 2rem;
     border: 1px solid #ccc;

@@ -6,7 +6,7 @@ import { setupRouterGuard } from '@/router/guard.config'
 
 const routes: Array<RouteRecordRaw> = [
   routerMembers,
-  // routerGuide,
+  routerGuide,
   {
     path: '/',
     component: () => import(/* webpackChunkName: "home" */ '@/views/_guide/listIA.vue')

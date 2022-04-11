@@ -25,13 +25,6 @@
           class="btn-guide"
           @click="$router.push('/')"
         >
-          PLAY
-        </button>
-        <button
-          class="btn-guide"
-          style="background-color: purple"
-          @click="$router.push('/mydata')"
-        >
           MYDATA
         </button>
         <button
