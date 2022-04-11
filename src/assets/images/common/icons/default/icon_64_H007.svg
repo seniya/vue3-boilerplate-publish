@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <rect id="kazexmxsha" width="30" height="30" x="0" y="0" rx="15"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-24 -557) translate(24 557) translate(1 1)">
+                    <mask id="1asjwp8fwb" fill="#fff">
+                        <use xlink:href="#kazexmxsha"/>
+                    </mask>
+                    <use fill="#17C47E" xlink:href="#kazexmxsha"/>
+                    <path d="M4.688 4.688H25.313V25.313H4.688z" mask="url(#1asjwp8fwb)"/>
+                    <g mask="url(#1asjwp8fwb)">
+                        <g transform="translate(9.844 7.969)">
+                            <path fill="#FFF" d="M.474 3.281h9.365c.261 0 .473.212.473.474v10.303c0 .261-.212.473-.473.473H.474c-.262 0-.474-.212-.474-.473V3.755c0-.262.212-.474.474-.474z"/>
+                            <path fill="#17C47E" d="M3.75 9.375H6.563000000000001V14.530999999999999H3.75z"/>
+                            <ellipse cx="5.156" cy="3.516" fill="#333D4B" rx="3.281" ry="3.516"/>
+                            <path fill="#FFF" d="M3.75 2.813H6.563000000000001V3.813H3.75z"/>
+                            <path fill="#FFF" d="M3.75 2.813L6.563 2.813 6.563 3.75 3.75 3.75z" transform="rotate(90 5.156 3.281)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

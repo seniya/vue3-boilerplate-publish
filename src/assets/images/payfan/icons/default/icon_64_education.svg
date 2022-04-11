@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ABA25097-DE6F-40F3-94A8-D30C219CF2AA</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64" rx="32"></rect>
+    </defs>
+    <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_download_타임라인" transform="translate(-493.000000, -2213.000000)">
+            <g id="icon-/-education" transform="translate(493.000000, 2213.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#6B7583" xlink:href="#path-1"></use>
+                <rect id="Rectangle" mask="url(#mask-2)" x="10" y="10" width="44" height="44"></rect>
+                <g id="shape" mask="url(#mask-2)">
+                    <g transform="translate(14.000000, 20.000000)" id="Rectangle">
+                        <path d="M9,8 L27,8 C27.5522847,8 28,8.44771525 28,9 L28,16.8693313 C28.0000066,17.7935524 27.5740122,18.6661856 26.8453131,19.2346768 C24.4822291,21.0782256 21.5337914,22 18,22 C14.4662026,22 11.5177609,21.0782225 9.1546749,19.2346674 C8.4259904,18.6661695 8,17.7935431 8,16.8693294 L8,9 C8,8.44771525 8.44771525,8 9,8 Z" fill="#FFFFFF"></path>
+                        <rect fill="#FFCD5B" x="30" y="6" width="1" height="9"></rect>
+                        <path d="M19.0277199,0.231434345 L34.8343148,5.74462895 C35.2514947,5.89013746 35.4717279,6.34628655 35.3262194,6.76346646 C35.2458548,6.99387544 35.0647237,7.17500652 34.8343148,7.25537105 L19.0277199,12.7685657 C18.5982347,12.9183662 18.1305157,12.9172923 17.7017228,12.7655211 L2.13067857,7.25415324 C1.71417124,7.10673055 1.49603503,6.64957495 1.64345771,6.23306762 C1.72401994,6.00545841 1.90306936,5.826409 2.13067857,5.74584676 L17.7017228,0.234478881 C18.1305157,0.082707736 18.5982347,0.081633837 19.0277199,0.231434345 Z" fill="#35424F"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

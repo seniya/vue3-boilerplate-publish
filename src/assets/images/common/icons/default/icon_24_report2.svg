@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <rect id="6eu6qzm9za" width="24" height="24" x="0" y="0" rx="12"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g transform="translate(-16 -1039) translate(0 88) translate(16 929) translate(0 22)">
+                        <mask id="cvrn49df3b" fill="#fff">
+                            <use xlink:href="#6eu6qzm9za"/>
+                        </mask>
+                        <use fill="#6A44BF" xlink:href="#6eu6qzm9za"/>
+                        <path fill="#FFF" d="M12.684 5c.53 0 1.039.21 1.414.585l3.316 3.314c.375.375.586.884.586 1.415V17c0 1.105-.895 2-2 2H8c-1.105 0-2-.895-2-2V7c0-1.104.896-2 2-2h4.684zM9 13c-.513 0-.936.386-.993.883L8 14v2c0 .552.448 1 1 1 .513 0 .936-.386.993-.883L10 16v-2c0-.552-.448-1-1-1zm3-1c-.513 0-.936.386-.993.883L11 13v3c0 .552.448 1 1 1 .513 0 .936-.386.993-.883L13 16v-3c0-.552-.448-1-1-1zm3-2c-.513 0-.936.386-.993.883L14 11v5c0 .552.448 1 1 1 .513 0 .936-.386.993-.883L16 16v-5c0-.552-.448-1-1-1z" mask="url(#cvrn49df3b)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <filter id="38pihxsuga" width="262.5%" height="262.5%" x="-81.2%" y="-68.8%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+        </filter>
+        <filter id="gfdzrxya2c">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
+        </filter>
+        <circle id="rb0odipl3b" cx="8" cy="8" r="8"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <path d="M0 0H16V16H0z" transform="translate(-217.000000, -609.000000) translate(217.000000, 609.000000)"/>
+                <g fill="#000" opacity=".3" transform="translate(-217.000000, -609.000000) translate(217.000000, 609.000000)">
+                    <use filter="url(#38pihxsuga)" xlink:href="#rb0odipl3b"/>
+                    <use xlink:href="#rb0odipl3b"/>
+                </g>
+                <g filter="url(#gfdzrxya2c)" transform="translate(-217.000000, -609.000000) translate(217.000000, 609.000000)">
+                    <g fill="#000">
+                        <path d="M3.348 -1.052L4.148 -1.052 4.148 8.548 3.348 8.548z" transform="translate(4.252334, 4.252334) translate(3.747666, 3.747666) rotate(-225.000000) translate(-3.747666, -3.747666)"/>
+                        <path d="M3.348 -1.052L4.148 -1.052 4.148 8.548 3.348 8.548z" transform="translate(4.252334, 4.252334) translate(3.747666, 3.747666) rotate(-495.000000) translate(-3.747666, -3.747666)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

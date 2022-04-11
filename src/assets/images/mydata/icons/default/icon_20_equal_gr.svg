@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <filter id="3mmjhaqjda" width="128.6%" height="366.7%" x="-14.3%" y="-133.3%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="opglneqmic" width="128.6%" height="366.7%" x="-14.3%" y="-133.3%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceAlpha" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+        </filter>
+        <rect id="jh3rf0qdwb" width="14" height="1.5" x="0" y="0" rx=".75"/>
+        <rect id="gjeq6t4gmd" width="14" height="1.5" x="0" y="6" rx=".75"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <path d="M0 0H20V20H0z" transform="translate(-173 -450) translate(173 450)"/>
+                <g>
+                    <g transform="translate(-173 -450) translate(173 450) translate(3 6)">
+                        <use fill="#000" filter="url(#3mmjhaqjda)" xlink:href="#jh3rf0qdwb"/>
+                        <rect width="12.5" height="1" x=".75" y=".75" stroke="#666" stroke-linejoin="square" stroke-width="1.5" rx=".5"/>
+                    </g>
+                    <g transform="translate(-173 -450) translate(173 450) translate(3 6)">
+                        <use fill="#000" filter="url(#opglneqmic)" xlink:href="#gjeq6t4gmd"/>
+                        <rect width="12.5" height="1" x=".75" y="6.75" stroke="#666" stroke-linejoin="square" stroke-width="1.5" rx=".5"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

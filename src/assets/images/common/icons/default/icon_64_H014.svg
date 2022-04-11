@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <rect id="f7yu5dr8qa" width="30" height="30" x="0" y="0" rx="15"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-24 -921) translate(24 921) translate(1 1)">
+                    <mask id="1xjyn62czb" fill="#fff">
+                        <use xlink:href="#f7yu5dr8qa"/>
+                    </mask>
+                    <use fill="#55D26E" xlink:href="#f7yu5dr8qa"/>
+                    <path d="M4.688 4.688H25.313V25.313H4.688z" mask="url(#1xjyn62czb)"/>
+                    <g mask="url(#1xjyn62czb)">
+                        <g>
+                            <g fill="#333D4B" transform="translate(9.375 9.844) translate(.469 7.969)">
+                                <rect width="2.344" height="2.344" rx=".474"/>
+                                <rect width="2.344" height="2.344" x="7.969" rx=".474"/>
+                            </g>
+                            <g>
+                                <path fill="#FFF" d="M.948 4.219h9.354c.524 0 .948.424.948.948v3.265c0 .262-.212.474-.474.474H.474C.212 8.906 0 8.694 0 8.432V5.167c0-.524.424-.948.948-.948z" transform="translate(9.375 9.844)"/>
+                                <g transform="translate(9.375 9.844) translate(1.406 5.156)">
+                                    <path fill="#333D4B" d="M2.344 1.875H6.093999999999999V2.875H2.344z"/>
+                                    <circle cx=".703" cy=".703" r="1" fill="#55D26E"/>
+                                    <circle cx="7.734" cy=".703" r="1" fill="#55D26E"/>
+                                </g>
+                                <path fill="#FFF" d="M2.228 0h6.794c.21 0 .394.137.454.338l1.305 4.35H.47L1.774.338c.06-.2.244-.338.454-.338z" transform="translate(9.375 9.844)"/>
+                                <path fill="#55D26E" d="M2.93.938h5.39c.22 0 .41.15.461.362l.594 2.45h-7.5l.594-2.45c.052-.213.242-.363.46-.363z" transform="translate(9.375 9.844)"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

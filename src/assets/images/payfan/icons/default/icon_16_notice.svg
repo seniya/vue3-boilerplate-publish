@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7DA0CAEA-EC52-4B45-805C-CAD6B54BF2D0</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="09_마이페이지_01_메인" transform="translate(-36.000000, -117.000000)" fill="#FFFFFF">
+            <g id="noti" transform="translate(24.000000, 108.000000)">
+                <g id="icon" transform="translate(12.000000, 9.000000)">
+                    <rect id="Rectangle" opacity="0.2" x="0" y="0" width="16" height="16" rx="8"></rect>
+                    <g id="Group" transform="translate(4.000000, 4.000000)">
+                        <path d="M0.714851227,2.16733176 L6.71485123,0.38233176 C7.24420692,0.224848441 7.80099995,0.526310564 7.95848327,1.05566626 C7.98601594,1.14821306 8,1.24425956 8,1.34081503 L8,5.65918497 C8,6.21146972 7.55228475,6.65918497 7,6.65918497 C6.90344453,6.65918497 6.80739803,6.64520091 6.71485123,6.61766824 L0.714851227,4.83266824 C0.290763253,4.70650207 9.16809752e-16,4.31664233 0,3.87418497 L0,3.12581503 C-5.41853986e-17,2.68335767 0.290763253,2.29349793 0.714851227,2.16733176 Z" id="Rectangle"></path>
+                        <polygon id="Path-17" points="2 4 2 8 3 8 5 4"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

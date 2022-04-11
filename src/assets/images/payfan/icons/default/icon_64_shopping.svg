@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>343D5B33-E76F-490F-B45A-6CBFF1634243</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64" rx="32"></rect>
+    </defs>
+    <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_download_타임라인" transform="translate(-909.000000, -2059.000000)">
+            <g id="icon-/-online-shopping" transform="translate(909.000000, 2059.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#ED4452" xlink:href="#path-1"></use>
+                <rect id="Rectangle" mask="url(#mask-2)" x="10" y="10" width="44" height="44"></rect>
+                <g id="shape" mask="url(#mask-2)">
+                    <g transform="translate(19.000000, 20.000000)">
+                        <path d="M14.398376,1.49070818 L19.2912557,10.5237169 C19.5542996,11.0093364 19.3738664,11.616248 18.8882469,11.879292 C18.7419951,11.9585117 18.5782928,12 18.4119638,12 L7.73658987,12 C7.18430512,12 6.73658987,11.5522847 6.73658987,11 C6.73658987,10.8089005 6.79134622,10.6218024 6.89437641,10.4608558 L12.6768706,1.42784711 C12.9746317,0.962705462 13.5930866,0.827016743 14.0582283,1.12477787 C14.2007455,1.2160105 14.3177806,1.34191661 14.398376,1.49070818 Z" id="Rectangle" stroke="#333D4B" stroke-width="2" fill="none"></path>
+                        <path d="M1.27421109,7 L24.7257889,7 C25.2780737,7 25.7257889,7.44771525 25.7257889,8 C25.7257889,8.08009272 25.7161668,8.15989541 25.6971293,8.23769271 L22.0265411,23.2376927 C21.9170293,23.6852168 21.515929,24 21.0552007,24 L4.94479932,24 C4.48407096,24 4.08297069,23.6852168 3.97345892,23.2376927 L0.302870687,8.23769271 C0.171596628,7.70123622 0.500061888,7.15993366 1.03651838,7.0286596 C1.11431568,7.00962214 1.19411837,7 1.27421109,7 Z" id="Rectangle" stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
+                        <circle id="Oval" stroke="none" fill="#333D4B" fill-rule="evenodd" cx="8.5" cy="11.5" r="1.5"></circle>
+                        <circle id="Oval" stroke="none" fill="#333D4B" fill-rule="evenodd" cx="18.5" cy="11.5" r="1.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

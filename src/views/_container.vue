@@ -1,5 +1,4 @@
 <template>
-  <mainMenu />
   <div>
     <router-view></router-view>
   </div>
@@ -10,11 +9,10 @@ import { defineComponent, inject, onMounted, onUnmounted } from 'vue'
 import { Emitter } from 'mitt'
 import { EventsType } from '@/utils/instance.eventBus'
 import { logger } from '@/utils/instance.logger'
-import mainMenu from '@/components/mainMenu.vue'
 
 export default defineComponent({
   name: 'mainContainer',
-  components: { mainMenu },
+  components: { },
   setup () {
     const eventBus = inject<Emitter<EventsType>>('eventBus')
 

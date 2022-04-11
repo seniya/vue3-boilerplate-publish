@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EF3C0DF5-38C3-4572-AAC8-00CF6E873B96</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64" rx="32"></rect>
+    </defs>
+    <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_download_타임라인" transform="translate(-701.000000, -2213.000000)">
+            <g id="icon-/-none" transform="translate(701.000000, 2213.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#44A4E9" xlink:href="#path-1"></use>
+                <rect id="Rectangle" mask="url(#mask-2)" x="10" y="10" width="44" height="44"></rect>
+                <g id="shape" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(30.000000, 20.000000)">
+                        <path d="M2,18 C0.8954305,18 0,17.1045695 0,16 L0,2 C0,0.8954305 0.8954305,-1.77635684e-15 2,-1.77635684e-15 C3.1045695,-1.77635684e-15 4,0.8954305 4,2 L4,16 C4,17.1045695 3.1045695,18 2,18 Z" id="Path"></path>
+                        <circle id="Oval" cx="2" cy="22.8333333" r="2"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <filter id="bsqv8ltwma">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-48.000000, -326.000000) translate(24.000000, 312.000000) translate(24.000000, 14.000000)">
+                    <circle cx="10" cy="10" r="10" fill="#4512B0"/>
+                    <g filter="url(#bsqv8ltwma)">
+                        <g>
+                            <path fill="#000" fill-rule="nonzero" d="M5.28 10v-.96H3.89V2.59h-.9l-2 1.71.61.74 1.2-1.01c-.01.17-.01.34-.01.5v4.51H1.25V10h4.03z" transform="translate(7.000000, 3.000000)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

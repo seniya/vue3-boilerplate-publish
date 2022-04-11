@@ -1,0 +1,26 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="a" x="0" y="0" width="64" height="64" rx="32"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#1C63D6" xlink:href="#a"/>
+        <path mask="url(#b)" d="M9 10h44v44H9z"/>
+        <g mask="url(#b)">
+            <g transform="translate(21 38)" fill="#333D4B">
+                <rect width="5" height="5" rx="1"/>
+                <rect x="17" width="5" height="5" rx="1"/>
+            </g>
+            <path d="M22 30h20a2 2 0 0 1 2 2v7a1 1 0 0 1-1 1H21a1 1 0 0 1-1-1v-7a2 2 0 0 1 2-2z" fill="#FFF"/>
+            <g transform="translate(23 32)">
+                <path fill="#333D4B" d="M5 4h8v2H5z"/>
+                <circle fill="#1C63D6" cx="1.5" cy="1.5" r="1.5"/>
+                <circle fill="#1C63D6" cx="16.5" cy="1.5" r="1.5"/>
+            </g>
+            <path d="M24.744 21h14.512a1 1 0 0 1 .958.713L43 31H21l2.786-9.287a1 1 0 0 1 .958-.713z" fill="#FFF"/>
+            <path d="M26.241 23H37.76a1 1 0 0 1 .972.764L40 29H24l1.27-5.236A1 1 0 0 1 26.24 23z" fill="#1C63D6"/>
+        </g>
+    </g>
+</svg>

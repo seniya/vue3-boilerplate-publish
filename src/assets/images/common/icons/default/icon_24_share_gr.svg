@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <filter id="ruhbjzip5a">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.733333 0 0 0 0 0.733333 0 0 0 0 0.733333 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g filter="url(#ruhbjzip5a)" transform="translate(-2004 -788) translate(1992 776)">
+                <g>
+                    <path d="M0 0H24V24H0z" transform="translate(12 12)"/>
+                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.5 23L8.5 23 8.5 9 15.5 9" transform="translate(12 12) rotate(-90 12 16)"/>
+                    <path stroke="#000" stroke-linecap="square" stroke-width="1.5" d="M17.375 9.875L6.625 9.875" transform="translate(12 12) matrix(0 -1 -1 0 21.875 21.875)"/>
+                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 10L14 6 10 2" transform="translate(12 12) matrix(0 -1 -1 0 18 18)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

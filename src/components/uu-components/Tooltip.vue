@@ -237,11 +237,11 @@ export default {
   computed: {
     // 랜덤아이디생성
     randomString () {
-      var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
-      var stringLength = 15
-      var randomstring = ''
-      for (var i = 0; i < stringLength; i++) {
-        var rnum = Math.floor(Math.random() * chars.length)
+      const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
+      const stringLength = 15
+      let randomstring = ''
+      for (let i = 0; i < stringLength; i++) {
+        const rnum = Math.floor(Math.random() * chars.length)
         randomstring += chars.substring(rnum, rnum + 1)
       }
       return randomstring
@@ -264,10 +264,10 @@ export default {
       this.tooltipShow = false
     }
     if (this.type === 'type2' && this.small) {
-      var tootipBtn = document.querySelector('.btn')
+      const tootipBtn = document.querySelector('.btn')
       if (!tootipBtn.classList.contains('btn-underline') && !this.hideClose) {
-        var tooltip2 = document.querySelectorAll('.tooltip2')
-        for (var i = 0; i < tooltip2.length; i++) {
+        const tooltip2 = document.querySelectorAll('.tooltip2')
+        for (let i = 0; i < tooltip2.length; i++) {
           tooltip2[i].classList.add('hide-close')
         }
       }
@@ -289,12 +289,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  // .fade-enter-active {
-  //   transition: opacity 2s;
-  // }
-  // .fade-leave-to {
-  //   opacity: 0;
-  // }
-</style>

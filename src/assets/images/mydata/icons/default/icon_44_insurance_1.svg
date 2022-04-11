@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>93DCA539-A1F1-4448-8FB6-C55448D5B501</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="44" height="44" rx="22"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-4-2.-금융추천-Main-_투자(회원)_투자상품목록" transform="translate(-24.000000, -3303.000000)">
+            <g id="insurance01" transform="translate(24.000000, 3303.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FF667C" xlink:href="#path-1"></use>
+                <rect id="48x48" opacity="0.200000003" mask="url(#mask-2)" x="10" y="10" width="24" height="24"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" mask="url(#mask-2)" x="14" y="14" width="16" height="18" rx="1"></rect>
+                <rect id="Rectangle" fill="#FF0065" mask="url(#mask-2)" x="20" y="19.5" width="7" height="1.5" rx="0.75"></rect>
+                <rect id="Rectangle-Copy-2" fill="#FF0065" mask="url(#mask-2)" x="20" y="22.5" width="7" height="1.5" rx="0.75"></rect>
+                <rect id="Rectangle-Copy" fill="#FF0065" mask="url(#mask-2)" x="17" y="19.5" width="1.5" height="1.5" rx="0.75"></rect>
+                <rect id="Rectangle-Copy-3" fill="#FF0065" mask="url(#mask-2)" x="17" y="22.5" width="1.5" height="1.5" rx="0.75"></rect>
+                <rect id="Rectangle-Copy-10" fill="#FF0065" mask="url(#mask-2)" x="20" y="25.5" width="7" height="1.5" rx="0.75"></rect>
+                <rect id="Rectangle-Copy-9" fill="#FF0065" mask="url(#mask-2)" x="17" y="25.5" width="1.5" height="1.5" rx="0.75"></rect>
+                <path d="M18,13 L26,13 C26.5522847,13 27,13.4477153 27,14 L27,15 L27,15 L17,15 L17,14 C17,13.4477153 17.4477153,13 18,13 Z" id="Rectangle" fill="#333D4B" mask="url(#mask-2)"></path>
+                <circle id="Oval" fill="#FF667C" mask="url(#mask-2)" cx="21.875" cy="12.875" r="1"></circle>
+                <path d="M22,11 C23.1045695,11 24,11.8954305 24,13 C24,14.1045695 23.1045695,15 22,15 C20.8954305,15 20,14.1045695 20,13 C20,11.8954305 20.8954305,11 22,11 Z M22.0003046,12.5174497 C21.7243304,12.527087 21.5084217,12.7586208 21.5180589,13.0345949 C21.5276962,13.3105691 21.7592299,13.5264778 22.0352041,13.5168406 C22.3111782,13.5072033 22.527087,13.2756696 22.5174497,12.9996954 C22.5078125,12.7237213 22.2762787,12.5078125 22.0003046,12.5174497 Z" id="Combined-Shape" fill="#333D4B" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <filter id="ejaybi7lda">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <g filter="url(#ejaybi7lda)" transform="translate(-310 -540) translate(0 98) translate(24 146) translate(0 74) translate(0 212) translate(284 8)">
+                                <g>
+                                    <path d="M0 0H16V16H0z" transform="translate(2 2)"/>
+                                    <path fill="#000" d="M7.5 2H8.5V14H7.5z" transform="translate(2 2) rotate(-45 8 8)"/>
+                                    <path fill="#000" d="M7.5 2H8.5V14H7.5z" transform="translate(2 2) rotate(45 8 8)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

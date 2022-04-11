@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>2A72082D-6550-4AE6-A055-ACAD6228B404</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64" rx="32"></rect>
+    </defs>
+    <g id="all" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_download_타임라인" transform="translate(-805.000000, -2213.000000)">
+            <g id="icon-/-telecommunications" transform="translate(805.000000, 2213.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFCD58" xlink:href="#path-1"></use>
+                <rect id="Rectangle" mask="url(#mask-2)" x="10" y="10" width="44" height="44"></rect>
+                <g id="shape" mask="url(#mask-2)">
+                    <g transform="translate(23.000000, 18.000000)" id="Rectangle">
+                        <rect fill="#42A4EE" x="0" y="0" width="18" height="28" rx="1.05882353"></rect>
+                        <rect fill="#FFFFFF" x="0" y="4.30769231" width="18" height="19.3846154"></rect>
+                        <rect fill="#333D4B" x="6.35294118" y="25.3076923" width="5.29411765" height="1.07692308" rx="0.529411765"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

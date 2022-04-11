@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>9C2C8581-57BA-4C99-B0F3-1CCD073471B4</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="44" height="44" rx="22"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-4-2.-금융추천-Main-_투자(회원)_투자상품목록" transform="translate(-23.000000, -2963.000000)">
+            <g id="card01" transform="translate(23.000000, 2963.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#17C47E" xlink:href="#path-1"></use>
+                <rect id="48x48" opacity="0.200000003" mask="url(#mask-2)" x="8" y="8" width="28" height="28"></rect>
+                <g id="Group-7" mask="url(#mask-2)">
+                    <g transform="translate(12.000000, 15.000000)">
+                        <path d="M0,13 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L19,0 C19.5522847,-1.01453063e-16 20,0.44771525 20,1 L20,13 C20,13.5522847 19.5522847,14 19,14 L1,14 C0.44771525,14 6.76353751e-17,13.5522847 0,13 Z" id="Path" fill="#FFFFFF" fill-rule="evenodd"></path>
+                        <g id="Group-4" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(12.000000, 9.000000)">
+                            <circle id="Oval" fill="#333D4B" cx="5" cy="5" r="5"></circle>
+                            <polyline id="Path-8" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="3.4 6.6 3.4 3.4 6.6 6.6 6.6 3.4"></polyline>
+                        </g>
+                        <polygon id="Rectangle" fill="#333D4B" fill-rule="nonzero" points="0 3 20 3 20 6 0 6"></polygon>
+                        <rect id="Rectangle" fill="#17C47E" fill-rule="nonzero" x="2" y="10" width="4" height="2" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

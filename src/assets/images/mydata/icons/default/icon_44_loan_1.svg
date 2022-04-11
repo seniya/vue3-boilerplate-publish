@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1D0707A5-B194-4666-83C4-13991D772FFE</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="44" height="44" rx="22"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-4-2.-금융추천-Main-_투자(회원)_투자상품목록" transform="translate(-24.000000, -1441.000000)">
+            <g id="loan01" transform="translate(24.000000, 1441.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#9777DB" xlink:href="#path-1"></use>
+                <rect id="48x48" opacity="0.200000003" mask="url(#mask-2)" x="10" y="10" width="24" height="24"></rect>
+                <g id="shape" mask="url(#mask-2)">
+                    <g transform="translate(11.000000, 12.000000)">
+                        <g id="Group-18" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Group-19">
+                                <path d="M3.6,0 L17.4,0 C18.2284271,-3.74224199e-16 18.9,0.671572875 18.9,1.5 L18.9,11.0344828 L18.9,11.0344828 L2.1,11.0344828 L2.1,1.5 C2.1,0.671572875 2.77157288,-6.98650109e-17 3.6,0 Z" id="Rectangle" fill="#FFFFFF"></path>
+                                <path d="M1.26129652,11.0344828 L19.7387035,11.0344828 C20.2909882,11.0344828 20.7387035,11.482198 20.7387035,12.0344828 C20.7387035,12.1112617 20.7298611,12.1877853 20.712351,12.262541 L18.9,20 L18.9,20 L2.1,20 L0.287649018,12.262541 C0.16169595,11.7248103 0.495507649,11.1867883 1.03323832,11.0608353 C1.10799398,11.0433252 1.18451753,11.0344828 1.26129652,11.0344828 Z" id="Rectangle" fill="#C2A7FF" fill-rule="nonzero" transform="translate(10.500000, 15.517241) rotate(-180.000000) translate(-10.500000, -15.517241) "></path>
+                            </g>
+                            <path d="M4.75,8 L9.25,8 C9.66421356,8 10,8.33578644 10,8.75 C10,9.16421356 9.66421356,9.5 9.25,9.5 L4.75,9.5 C4.33578644,9.5 4,9.16421356 4,8.75 C4,8.33578644 4.33578644,8 4.75,8 Z" id="Rectangle" fill="#C2A7FF" fill-rule="nonzero"></path>
+                            <path d="M4.75,5.5 L9.25,5.5 C9.66421356,5.5 10,5.83578644 10,6.25 C10,6.66421356 9.66421356,7 9.25,7 L4.75,7 C4.33578644,7 4,6.66421356 4,6.25 C4,5.83578644 4.33578644,5.5 4.75,5.5 Z" id="Rectangle" fill="#C2A7FF" fill-rule="nonzero"></path>
+                            <path d="M15.5,2 C16.3284271,2 17,2.67157288 17,3.5 C17,4.32842712 16.3284271,5 15.5,5 C14.6715729,5 14,4.32842712 14,3.5 C14,2.67157288 14.6715729,2 15.5,2 Z" id="Rectangle" fill="#C2A7FF" fill-rule="nonzero"></path>
+                        </g>
+                        <circle id="Oval" stroke="none" fill="#333D4B" fill-rule="evenodd" cx="18" cy="17" r="5"></circle>
+                        <line x1="15.6974337" y1="17" x2="20.3" y2="17" id="Path-10" stroke="#FFFFFF" stroke-width="1.2" fill="none" stroke-linecap="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

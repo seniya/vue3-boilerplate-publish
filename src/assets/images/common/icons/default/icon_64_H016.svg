@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <rect id="pg7pwx2gwa" width="30" height="30" x="0" y="0" rx="15"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-24 -1025) translate(24 1025) translate(1 1)">
+                    <mask id="tkr5ag1z8b" fill="#fff">
+                        <use xlink:href="#pg7pwx2gwa"/>
+                    </mask>
+                    <use fill="#32C8F0" xlink:href="#pg7pwx2gwa"/>
+                    <path d="M4.688 4.688H25.313V25.313H4.688z" mask="url(#tkr5ag1z8b)"/>
+                    <g mask="url(#tkr5ag1z8b)">
+                        <g transform="translate(8.906 7.969)">
+                            <path fill="#2672BC" d="M2.984 11.954l3.65-1.565v2.25l-3.396.486c-.26.037-.5-.143-.536-.403-.004-.022-.005-.044-.005-.067v-.266c0-.19.113-.36.287-.435z" transform="rotate(-6 4.666 11.796)"/>
+                            <path fill="#2672BC" d="M6.265 11.954l3.65-1.565v2.25l-3.396.486c-.259.037-.5-.143-.536-.403-.003-.022-.005-.044-.005-.067v-.266c0-.19.113-.36.287-.435z" transform="scale(-1 1) rotate(-6 0 163.43)"/>
+                            <path fill="#2672BC" d="M7.66 6.717l4.996-2.498V7.5l-5.349.892c-.129.021-.251-.066-.273-.195-.002-.013-.003-.026-.003-.04v-.423c0-.43.244-.824.63-1.017z" transform="matrix(-1 0 0 1 19.688 0)"/>
+                            <path fill="#2672BC" d="M.524 6.77l5.101-2.551V7.5l-5.349.892c-.13.021-.251-.066-.273-.195C.001 8.184 0 8.17 0 8.157v-.54c0-.359.203-.687.524-.848z"/>
+                            <rect width="2.344" height="13.125" x="5.156" fill="#FFF" rx="1.172"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

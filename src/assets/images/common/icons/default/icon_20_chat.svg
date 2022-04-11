@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <filter id="q5a8zlpcfa">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g filter="url(#q5a8zlpcfa)" transform="translate(-2172 -1476) translate(2172 1476)">
+                <path d="M0 0H20V20H0z"/>
+                <g fill="#000" fill-rule="nonzero">
+                    <path d="M13.4 0H3.8C1.701 0 0 1.701 0 3.8v5.6l.005.196C.107 11.603 1.767 13.2 3.8 13.2h3.093l1.698 2.718.06.08c.258.294.74.267.958-.08l1.697-2.718H13.4c2.099 0 3.8-1.701 3.8-3.8V3.8c0-2.099-1.701-3.8-3.8-3.8zM3.8 1.2h9.6c1.436 0 2.6 1.164 2.6 2.6v5.6c0 1.436-1.164 2.6-2.6 2.6h-2.425l-.102.009c-.167.028-.315.127-.407.273L9.1 14.468l-1.366-2.186c-.11-.175-.302-.282-.509-.282H3.8c-1.436 0-2.6-1.164-2.6-2.6V3.8c0-1.436 1.164-2.6 2.6-2.6z" transform="translate(1.4 2.4)"/>
+                    <g transform="translate(1.4 2.4) translate(4.9 6)">
+                        <circle cx="7.05" cy=".65" r="1"/>
+                        <circle cx="3.85" cy=".65" r="1"/>
+                        <circle cx=".65" cy=".65" r="1"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

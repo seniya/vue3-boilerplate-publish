@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <path d="M0 0H24V24H0z" transform="translate(-24.000000, -4232.000000) translate(24.000000, 4232.000000)"/>
+                <g transform="translate(-24.000000, -4232.000000) translate(24.000000, 4232.000000) translate(3.000000, 4.000000)">
+                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M10.421 2.259H5.197c-.565 0-1.09.356-1.387.937l-1.536 3.58"/>
+                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M6.821 2.259h5.224c.565 0 1.09.356 1.387.937l1.536 3.58M10.989 2.259L6.253 2.259 7.268 0 10.042 0zM0 12.424V8.856c0-1.15.91-2.08 2.037-2.08h13.188c1.116 0 2.017.924 2.017 2.06v3.588H0z"/>
+                    <circle cx="3.979" cy="9.6" r="1" fill="#000" fill-rule="nonzero"/>
+                    <circle cx="13.263" cy="9.6" r="1" fill="#000" fill-rule="nonzero"/>
+                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4.32 15.512H2.884c-.337 0-.61-.31-.61-.693V12.5h2.652v2.32c.004.382-.269.692-.606.692zM14.741 15.512h-1.436c-.337 0-.61-.31-.61-.693V12.5h2.652v2.32c.004.382-.269.692-.606.692z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

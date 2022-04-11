@@ -5,6 +5,10 @@ import router from '@/router'
 import pinia from '@/service'
 import eventBus from '@/utils/instance.eventBus'
 
+import '@/assets/scss/_value.scss'
+import '@/assets/scss/style.scss'
+import '@/assets/scss/guide.scss'
+
 const app = createApp(App)
 app.use(router)
 app.use(pinia)

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cmp / btn / fill_round / 40 / feed_normal_b</title>
+    <g id="07_디스커버-커뮤니티" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="07_디스커버_커뮤니티_관심주제설정" transform="translate(-314.000000, -258.000000)">
+            <g id="+-Contents" transform="translate(0.000000, 98.000000)">
+                <g id="++-List" transform="translate(24.000000, 48.000000)">
+                    <g id="List" transform="translate(0.000000, 97.000000)">
+                        <g id="icon/system/bookmark/line/24" transform="translate(290.000000, 15.000000)">
+                            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                            <g id="icon" transform="translate(5.000109, 4.000000)" fill="#BBBBBB" fill-rule="nonzero">
+                                <path d="M13,0 C13.5522847,0 14,0.44771525 14,1 L14,15.5559337 C14,16.1082185 13.5522847,16.5559337 13,16.5559337 C12.731784,16.5559337 12.474811,16.4481872 12.2868017,16.256896 L8.21677606,12.1158239 L7.71134176,11.6042165 C7.35305242,11.2415512 6.78600012,11.2103793 6.39186477,11.5130175 L6.28854292,11.6042445 L5.78317605,12.1158239 L1.71320123,16.2568786 C1.32607207,16.6507688 0.692930811,16.6562497 0.29904065,16.2691205 C0.107747652,16.081111 0,15.8241367 0,15.5559193 L0,1 C0,0.44771525 0.44771525,0 1,0 L13,0 Z M12.5,1.5 L1.5,1.5 L1.5,14.333 L5.24295136,10.5285544 C6.18246474,9.60037734 7.67154663,9.56881213 8.64847662,10.4274145 L8.77842014,10.5500136 L9.28657355,11.0643805 L12.5,14.334 L12.5,1.5 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

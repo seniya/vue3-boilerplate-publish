@@ -79,6 +79,95 @@
   </div>
 </template>
 
+<script lang="ts">
+import { computed, defineComponent, reactive, toRefs } from 'vue'
+
+export default defineComponent({
+  name: 'component-list-table',
+  components: {
+  },
+  props: {
+    items: {
+      type: Array,
+      required: true
+    }
+  },
+  setup (props) {
+    const state = reactive({})
+
+    const ratioPage = computed(() => {
+      return (donePageLength.value / realPageLength.value) * 100
+    })
+
+    const realPageLength = computed(() => {
+      return totalPageLength.value - (deletePageLength.value + nativePageLength.value)
+    })
+
+    const deletePageLength = computed(() => {
+      return props.items.filter((item: any) => {
+        return item.status.includes('delete')
+      }).length
+    })
+
+    const nativePageLength = computed(() => {
+      return props.items.filter((item: any) => {
+        return item.status.includes('native')
+      }).length
+    })
+
+    const donePageLength = computed(() => {
+      return props.items.filter((item: any) => {
+        return item.status.includes('done')
+      }).length - doneDeletePageLength.value
+    })
+
+    const doneDeletePageLength = computed(() => {
+      return props.items.filter((item: any) => {
+        return item.status.includes('done delete')
+      }).length
+    })
+
+    const finePageLength = computed(() => {
+      return props.items.filter((item: any) => {
+        return item.status.includes('done fine')
+      }).length
+    })
+
+    const totalPageLength = computed(() => {
+      return props.items.length
+    })
+
+    function displayStatus (status: string) {
+      if (status.includes('delete')) {
+        return '삭제'
+      } else if (status.includes('ing')) {
+        return '작업중'
+      } else if (status.includes('fine')) {
+        return '배포'
+      } else if (status.includes('native')) {
+        return '네이티브'
+      } else if (status.includes('done')) {
+        return '완료'
+      }
+      return ''
+    }
+    return {
+      ...toRefs(state),
+      ratioPage,
+      realPageLength,
+      deletePageLength,
+      nativePageLength,
+      donePageLength,
+      doneDeletePageLength,
+      finePageLength,
+      totalPageLength,
+
+      displayStatus
+    }
+  }
+})
+
+/*
 <script>
 // import listItems from "@/views/_guide/listItems";
 export default {
@@ -150,8 +239,5 @@ export default {
     }
   }
 }
+*/
 </script>
-
-<style lang="scss" scoped>
-  @import "@/assets/scss/guide.scss";
-</style>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <rect id="qna4odzk8a" width="64" height="64" x="0" y="0" rx="32"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g transform="translate(-140 -128) translate(140 128) translate(8 8)">
+                    <mask id="zw6x9nvlvb" fill="#fff">
+                        <use xlink:href="#qna4odzk8a"/>
+                    </mask>
+                    <use fill="#1C63D6" xlink:href="#qna4odzk8a"/>
+                    <path d="M10 10H54V54H10z" mask="url(#zw6x9nvlvb)"/>
+                    <g mask="url(#zw6x9nvlvb)">
+                        <g>
+                            <g>
+                                <path fill="#FFF" d="M7 0v18H0V7c0-3.866 3.134-7 7-7z" transform="translate(22 18) translate(13)"/>
+                                <path fill="#8FC0FE" d="M3 18h4v10c0 .552-.448 1-1 1H4c-.552 0-1-.448-1-1V18z" transform="translate(22 18) translate(13)"/>
+                            </g>
+                            <g>
+                                <path fill="#8FC0FE" d="M2 12h4v15c0 .552-.448 1-1 1H3c-.552 0-1-.448-1-1V12z" transform="translate(22 18) translate(0 1)"/>
+                                <path fill="#FFF" d="M4 14c2.21 0 4-1.79 4-4H0c0 2.21 1.79 4 4 4zM0 8H8V10H0z" transform="translate(22 18) translate(0 1)"/>
+                                <path fill="#FFF" d="M0 0H2V9H0zM3 0H5V9H3zM6 0H8V9H6z" transform="translate(22 18) translate(0 1)"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

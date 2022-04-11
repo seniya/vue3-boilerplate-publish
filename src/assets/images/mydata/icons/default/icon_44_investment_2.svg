@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>68B500DA-33F7-43FE-A7F4-3BC49D5B279F</title>
+    <defs>
+        <circle id="path-1" cx="22" cy="22" r="22"></circle>
+        <circle id="path-3" cx="4" cy="4" r="4"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-4-2.-금융추천-Main-_투자(회원)_투자상품목록" transform="translate(-24.000000, -4148.000000)">
+            <g id="investment02" transform="translate(24.000000, 4148.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask-Copy" fill="#32C8F0" xlink:href="#path-1"></use>
+                <rect id="Rectangle-Copy-5" fill="#32C8F0" opacity="0.100000001" mask="url(#mask-2)" x="10" y="10" width="24" height="24"></rect>
+                <g id="Group-34" mask="url(#mask-2)">
+                    <g transform="translate(13.000000, 11.000000)">
+                        <path d="M11.5656149,0 L18,5.79517357 L18,21.1538657 C18,21.6211728 17.599559,22 17.1055901,22 L0.894409938,22 C0.400440969,22 0,21.6211728 0,21.1538657 L0,0.846684128 C0,0.379377078 0.400440969,0.000549863789 0.894409938,0.000549863789 L11.5656149,0 Z" id="Path" fill="#FFFFFF"></path>
+                        <rect id="Rectangle" fill="#0FABD4" x="3" y="14" width="12" height="1.5" rx="0.75"></rect>
+                        <rect id="Rectangle" fill="#0FABD4" x="3" y="17" width="12" height="1.5" rx="0.75"></rect>
+                        <g id="shape" stroke-width="1" fill="none" transform="translate(4.600000, 4.000000)">
+                            <g id="Group-38">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Oval" fill="#46C5E6" xlink:href="#path-3"></use>
+                                <polyline id="Path-4" stroke="#FFFFFF" stroke-width="1.125" mask="url(#mask-4)" points="0.514730413 6.48954458 4.375 4.375 4.375 0"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

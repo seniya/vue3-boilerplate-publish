@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="fbueoolz5a" x1="0%" x2="100%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#4868E1" stop-opacity=".392"/>
+            <stop offset="84.356%" stop-color="#4868E1" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="2expm2cspb">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.282353 0 0 0 0 0.407843 0 0 0 0 0.882353 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <path stroke="#000" stroke-width="1.8" d="M22.362 24.739c2.303 2.617 3.213 3.863 3.213 5.72" transform="translate(-271 -996) translate(271 996) translate(.828 4.647)"/>
+                    <path stroke="#000" stroke-linecap="round" stroke-width="1.8" d="M39.523 41.793c3.226-5.828 5.051-9.656 5.477-11.483.575-2.468.925-9.094-1.746-16.648" transform="translate(-271 -996) translate(271 996) translate(.828 4.647)"/>
+                    <path fill="url(#fbueoolz5a)" d="M3.172 1.353H43.172V24.353H3.172z" opacity=".8" transform="translate(-271 -996) translate(271 996) translate(.828 4.647)"/>
+                    <path stroke="#4868E1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3.138.414v22.782c0 1.083.78 1.96 1.742 1.96h22.757m7.948 0h5.88c.962 0 1.742-.877 1.742-1.96V7.028h0" transform="translate(-271 -996) translate(271 996) translate(.828 4.647)"/>
+                    <g filter="url(#2expm2cspb)" transform="translate(-271 -996) translate(271 996) translate(.828 4.647)">
+                        <g fill="#000" stroke="#000" stroke-width=".3">
+                            <path fill-rule="nonzero" d="M11.508 0.007L12.677 0.012 9.578 9.548 8.626 9.536 6.598 1.891 4.364 9.548 3.413 9.54 0.631 0.012 1.661 0.012 3.904 7.682 6.147 0 7.098 0.012 9.126 7.657z" transform="translate(8.276 8.076)"/>
+                            <path d="M0.15 4.089H13.091000000000001V5.089H0.15z" transform="translate(8.276 8.076)"/>
+                        </g>
+                    </g>
+                    <path stroke="#000" stroke-linecap="round" stroke-width="1.8" d="M0 0.414L46.345 0.414" transform="translate(-271 -996) translate(271 996) translate(.828 4.647)"/>
+                    <path fill="#FFF" stroke="#000" stroke-linecap="round" stroke-width="1.8" d="M24.62 41.793c-1.674-5.573-.708-10.001 2.897-13.283-.036-2.21-.386-4.958-1.05-8.248-.05-1.948.777-3.12 2.483-3.517 1.705-.396 2.981.373 3.827 2.307 1.46 3 2.189 5.839 2.189 8.518" transform="translate(-271 -996) translate(271 996) translate(.828 4.647)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
