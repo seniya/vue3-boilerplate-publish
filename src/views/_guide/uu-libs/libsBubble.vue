@@ -141,21 +141,26 @@
 <script>
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
-export default {
-  data () {
-    return {
-      selectedValue: '1'
-    }
-  },
-  mounted () {
-    Prism.highlightAll()
-  },
-  methods: {
-    changeValue (newValue) {
+import uuBubble from '@/components/uu-components/Bubble.vue'
+import { defineComponent, onMounted, ref } from 'vue'
+
+export default defineComponent({
+  components: { uuBubble },
+  setup () {
+    const selectedValue = ref('1')
+
+    const changeValue = (newValue) => {
       this.selectedValue = newValue
     }
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+    return {
+      selectedValue,
+      changeValue
+    }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

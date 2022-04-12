@@ -195,8 +195,13 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { getRandomId } from '@/utils/common.function'
+import { computed, defineComponent, inject, onMounted, reactive, toRefs } from 'vue'
+import uuIcon from './Icon.vue'
+import { AccordionInterface } from './Accordion.vue'
+
+export default defineComponent({
   props: {
     multiple: {
       type: Boolean,
@@ -219,60 +224,59 @@ export default {
       default: false
     }
   },
-  data () {
-    return {
-      index: null,
+  components: { uuIcon },
+  setup (props) {
+    const randomString = getRandomId()
+    const parent = inject<AccordionInterface>('accordion', {
+      count: 0,
+      active: null,
+      type: ''
+    })
+    const state = reactive({
+      index: parent.count++,
       multiVisible: false,
-      type: this.$parent.Accordion.type
-    }
-  },
-  computed: {
-    // 랜덤아이디생성
-    randomString () {
-      var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
-      var stringLength = 15
-      var randomstring = ''
-      for (var i = 0; i < stringLength; i++) {
-        var rnum = Math.floor(Math.random() * chars.length)
-        randomstring += chars.substring(rnum, rnum + 1)
+      type: parent.type
+    })
+    const visible = computed(() => {
+      return state.index === parent.active
+    })
+
+    onMounted(() => {
+      if (props.active && props.multiple) {
+        state.multiVisible = true
       }
-      return randomstring
-    },
-    visible () {
-      return this.index === this.$parent.Accordion.active
-    }
-  },
-  created () {
-    this.index = this.$parent.Accordion.count++
-  },
-  mounted () {
-    if (this.active && this.multiple) {
-      this.multiVisible = true
-    }
-    if (this.active) {
-      this.$parent.Accordion.active = this.index
-    }
-  },
-  methods: {
-    open () {
-      if (this.multiple) {
-        this.multiVisible = !this.multiVisible
+      if (props.active) {
+        parent.active = state.index
+      }
+    })
+
+    const open = () => {
+      if (props.multiple) {
+        state.multiVisible = !state.multiVisible
       } else {
-        if (this.visible) {
-          this.$parent.Accordion.active = null
+        if (visible.value) {
+          parent.active = null
         } else {
-          this.$parent.Accordion.active = this.index
+          parent.active = state.index
         }
       }
-    },
-    startTransition (el) {
+    }
+    const startTransition = (el: HTMLElement) => {
       el.style.height = el.scrollHeight + 'px'
-    },
-    endTransition (el) {
+    }
+    const endTransition = (el: HTMLElement) => {
       el.style.height = ''
     }
+    return {
+      ...toRefs(state),
+      randomString,
+      visible,
+      open,
+      startTransition,
+      endTransition
+    }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
