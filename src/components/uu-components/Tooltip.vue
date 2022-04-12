@@ -118,6 +118,12 @@
 </template>
 
 <script>
+// import { defineComponent } from '@vue/runtime-core';
+
+// export default defineComponent({
+
+// })
+
 export default {
   props: {
     type: {

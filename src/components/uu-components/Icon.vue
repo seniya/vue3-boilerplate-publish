@@ -37,7 +37,10 @@
 </template>
 
 <script>
-export default {
+import { computed, defineComponent, reactive, toRefs } from '@vue/runtime-core'
+
+export default defineComponent({
+  name: 'uu-icon',
   props: {
     icon: {
       type: String,
@@ -78,62 +81,67 @@ export default {
       default: false
     }
   },
-  computed: {
-    computedSize () {
-      return parseInt(this.size) / 10
-    },
-    computedColor () {
-      if (this.color === null || this.color === '') {
-        return ''
-      } else if (this.color === 'black') {
-        return '_bk'
-      } else if (this.color === 'gray') {
-        return '_gr'
-      } else if (this.color === 'white') {
-        return '_wh'
-      } else {
-        return '_' + this.color
-      }
-    },
-    computedActive () {
-      if (this.active === 'active') {
-        return '_active'
-      } else {
-        return ''
-      }
-    },
-    computedDirection () {
-      if (this.direction === 'left') {
-        return 'direction-left'
-      } else if (this.direction === 'right') {
-        return 'direction-right'
-      } else if (this.direction === 'bottom') {
-        return 'direction-bottom'
-      } else {
-        return null
-      }
-    },
-    computedVertical () {
-      if (this.vertical === 'top') {
-        return 'vertical-top'
-      } else if (this.vertical === 'bottom') {
-        return 'vertical-bottom'
-      } else if (this.vertical === 'middle') {
-        return 'vertical-middle'
-      } else if (this.vertical === 'textTop') {
-        return 'vertical-text-top'
-      } else if (this.vertical === 'textBottom') {
-        return 'vertical-text-bottom'
-      } else if (this.vertical === 'sub') {
-        return 'vertical-sub'
-      } else if (this.vertical === 'super') {
-        return 'vertical-super'
-      } else {
-        return null
-      }
+  setup (props) {
+    const state = reactive({
+      computedColor: computed(() => {
+        if (props.color === null || props.color === '') {
+          return ''
+        } else if (props.color === 'black') {
+          return '_bk'
+        } else if (props.color === 'gray') {
+          return '_gr'
+        } else if (props.color === 'white') {
+          return '_wh'
+        } else {
+          return '_' + props.color
+        }
+      }),
+      computedSize: computed(() => parseInt(props.size) / 10),
+      computedActive: computed(() => {
+        if (props.active === 'active') {
+          return '_active'
+        } else {
+          return ''
+        }
+      }),
+      computedDirection: computed(() => {
+        if (props.direction === 'left') {
+          return 'direction-left'
+        } else if (props.direction === 'right') {
+          return 'direction-right'
+        } else if (props.direction === 'bottom') {
+          return 'direction-bottom'
+        } else {
+          return null
+        }
+      }),
+      computedVertical: computed(() => {
+        if (props.vertical === 'top') {
+          return 'vertical-top'
+        } else if (props.vertical === 'bottom') {
+          return 'vertical-bottom'
+        } else if (props.vertical === 'middle') {
+          return 'vertical-middle'
+        } else if (props.vertical === 'textTop') {
+          return 'vertical-text-top'
+        } else if (props.vertical === 'textBottom') {
+          return 'vertical-text-bottom'
+        } else if (props.vertical === 'sub') {
+          return 'vertical-sub'
+        } else if (props.vertical === 'super') {
+          return 'vertical-super'
+        } else {
+          return null
+        }
+      })
+    })
+
+    return {
+      ...toRefs(state)
     }
   }
-}
+
+})
 </script>
 
 <style lang="scss">
