@@ -516,26 +516,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
-import 'prismjs/themes/prism.css'
-export default {
-  data () {
-    return {
-      selectedValue: '1'
-    }
-  },
-  mounted () {
-    Prism.highlightAll()
-  },
-  methods: {
-    changeValue (newValue) {
-      this.selectedValue = newValue
-    }
-  }
-}
-</script>
+import { defineComponent, onMounted } from 'vue'
 
-<style lang="scss" scoped>
-@import "@/assets/scss/guide.scss";
-</style>
+export default defineComponent({
+  name: 'libs-radio',
+  components: { },
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+  }
+})
+</script>

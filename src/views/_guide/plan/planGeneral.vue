@@ -24,10 +24,18 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, onMounted } from 'vue'
 
-}
+export default defineComponent({
+  name: 'plan-general',
+  components: {},
+  setup () {
+    onMounted(() => {
+      console.log('onMounted')
+    })
+  }
+})
 </script>
 
 <style lang="scss" scoped>

@@ -335,18 +335,26 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
-import 'prismjs/themes/prism.css'
-export default {
-  mounted () {
-    Prism.highlightAll()
+import { defineComponent, onMounted } from 'vue'
+
+import Icon from '@/components/uu-components/Icon.vue'
+
+export default defineComponent({
+  name: 'libs-button-text',
+  components: {
+    'uu-icon': Icon
+  },
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/guide.scss";
 .view-exam {
   padding: 2rem 0;
   .btn-area {

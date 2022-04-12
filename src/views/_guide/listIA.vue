@@ -108,7 +108,6 @@ export default defineComponent({
     Tab,
     TabPanels,
     TabPanel,
-    // eslint-disable-next-line vue/no-unused-components
     ListTable
   },
   setup () {

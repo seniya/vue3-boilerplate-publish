@@ -8,6 +8,7 @@ import eventBus from '@/utils/instance.eventBus'
 import '@/assets/scss/_value.scss'
 import '@/assets/scss/style.scss'
 import '@/assets/scss/guide.scss'
+import 'prismjs/themes/prism.css'
 
 const app = createApp(App)
 app.use(router)

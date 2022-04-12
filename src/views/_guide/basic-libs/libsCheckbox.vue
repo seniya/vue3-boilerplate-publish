@@ -1166,26 +1166,30 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
-import 'prismjs/themes/prism.css'
-export default {
-  data () {
-    return {
+import { defineComponent, onMounted, reactive, toRefs } from 'vue'
+
+export default defineComponent({
+  name: 'libs-check-box',
+  components: {},
+  setup () {
+    const state = reactive({
       selectedValue: '1'
+    })
+
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+
+    function changeValue (newValue: string) {
+      state.selectedValue = newValue
     }
-  },
-  mounted () {
-    Prism.highlightAll()
-  },
-  methods: {
-    changeValue (newValue) {
-      this.selectedValue = newValue
+
+    return {
+      changeValue,
+      ...toRefs(state)
     }
   }
-}
+})
 </script>
-
-<style lang="scss" scoped>
-  @import "@/assets/scss/guide.scss";
-</style>

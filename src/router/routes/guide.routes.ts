@@ -1,4 +1,4 @@
-const container = (): Promise<typeof import('*.vue')> => import('@/views/_guide/convention/_container.vue')
+const container = (): Promise<typeof import('*.vue')> => import('@/views/_guide/_container.vue')
 
 // 규칙가이드
 const ruleIntro = (): Promise<typeof import('*.vue')> => import('@/views/_guide/convention/ruleIntro.vue')
@@ -20,6 +20,8 @@ const basicLibsRadio = (): Promise<typeof import('*.vue')> => import('@/views/_g
 const basicLibsInput = (): Promise<typeof import('*.vue')> => import('@/views/_guide/basic-libs/libsInput.vue')
 const basicLibsLoader = (): Promise<typeof import('*.vue')> => import('@/views/_guide/basic-libs/libsLoader.vue')
 const basicLibsCard = (): Promise<typeof import('*.vue')> => import('@/views/_guide/basic-libs/libsCard.vue')
+
+/*
 // uu-components
 const uuLibsAccordion = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsAccordion.vue')
 const uuLibsBubble = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsBubble.vue')
@@ -51,6 +53,7 @@ const libsVueA11y = (): Promise<typeof import('*.vue')> => import('@/views/_guid
 const libsInfiniteScroll = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsInfiniteScroll.vue')
 const libsScrollPicker = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsScrollPicker.vue')
 const libsHighcharts = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsHighcharts.vue')
+*/
 
 export default {
   path: '/convention',
@@ -78,7 +81,9 @@ export default {
     { component: basicLibsRadio, path: '/basic-libs/libsRadio' },
     { component: basicLibsInput, path: '/basic-libs/libsInput' },
     { component: basicLibsLoader, path: '/basic-libs/libsLoader' },
-    { component: basicLibsCard, path: '/basic-libs/libsCard' },
+    { component: basicLibsCard, path: '/basic-libs/libsCard' }
+
+    /*
     // uu-components
     { path: '/uu-libs', redirect: '/uu-libs/uuLibsAccordion' },
     { component: uuLibsAccordion, path: '/uu-libs/uuLibsAccordion' },
@@ -113,5 +118,6 @@ export default {
     { component: libsInfiniteScroll, path: '/libs/infinitescroll' },
     { component: libsScrollPicker, path: '/libs/scrollpicker' },
     { component: libsHighcharts, path: '/libs/highcharts' }
+    */
   ]
 }
