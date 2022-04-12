@@ -33,8 +33,11 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+
   props: {
     width: {
       type: String,
@@ -77,7 +80,7 @@ export default {
       default: ''
     }
   }
-}
+})
 </script>
 
 <style lang="scss">

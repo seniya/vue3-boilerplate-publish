@@ -141,7 +141,10 @@
 <script>
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
+import uuBubble from '@/components/uu-components/Bubble.vue'
+
 export default {
+  components: { uuBubble },
   data () {
     return {
       selectedValue: '1'

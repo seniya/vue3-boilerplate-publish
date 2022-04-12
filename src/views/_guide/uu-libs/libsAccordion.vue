@@ -7,22 +7,24 @@
           <h3>fOR문 사용 : 하나만 오픈</h3>
           <section class="view-section">
             <uu-accordion>
-              <uu-accordionitem
-                v-for="(item, index) in accordion"
-                :key="index"
-                :active="item.active"
-              >
-                <template v-slot:accordion-header>
-                  <div>
-                    <span class="title">{{ item.title }}</span>
-                  </div>
-                </template>
-                <template v-slot:accordion-content>
-                  <div style="height:100px; background-color:lightgray">
-                    {{ item.content }}
-                  </div>
-                </template>
-              </uu-accordionitem>
+              <template>
+                <uu-accordionitem
+                  v-for="(item, index) in accordion"
+                  :key="index"
+                  :active="item.active"
+                >
+                  <template v-slot:accordion-header>
+                    <div>
+                      <span class="title">{{ item.title }}</span>
+                    </div>
+                  </template>
+                  <template v-slot:accordion-content>
+                    <div style="height:100px; background-color:lightgray">
+                      {{ item.content }}
+                    </div>
+                  </template>
+                </uu-accordionitem>
+              </template>
             </uu-accordion>
           </section>
         </div>
@@ -450,9 +452,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
+import uuAccordion from '@/components/uu-components/Accordion.vue'
+import uuAccordionitem from '@/components/uu-components/AccordionItem.vue'
 export default {
+  name: 'pageOne',
+  components: { uuAccordionitem, uuAccordion },
   data () {
     return {
       active: true,

@@ -166,7 +166,10 @@ option: [position=""] bottom-right || bottom-left || top-right || top-left
 
 <script>
 import Prism from 'prismjs'
+import uuDropdown from '@/components/uu-components/Dropdown.vue'
+import uuIcon from '@/components/uu-components/Icon.vue'
 export default {
+  components: { uuDropdown, uuIcon },
   data () {
     return {
 

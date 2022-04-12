@@ -1,21 +1,22 @@
 <template>
   <div
     class="modal-backdrop"
-    :class="hideBackdrop? 'hide-backdrop':''"
+    :class="hideBackdropClass"
     aria-label="닫기"
     @click="closebtn"
   />
 </template>
 
-<script>
+<script lang="ts">
+import { computed } from '@vue/runtime-core'
 export default {
   props: {
     etarget: {
-      type: Element,
+      type: HTMLElement,
       default: null
     },
     etargetinner: {
-      type: Element,
+      type: HTMLElement,
       default: null
     },
     hideBackdrop: {
@@ -23,15 +24,23 @@ export default {
       default: false
     }
   },
-  methods: {
-    closebtn () {
-      this.$emit('close', 'backdrop')
-      if (this.etarget != null) {
-        this.etarget.focus()
+  setup (props, { emit }) {
+    const closebtn = () => {
+      emit('close', 'backdrop')
+      if (props.etarget != null) {
+        props.etarget.focus()
       }
-      if (this.etargetinner != null) {
-        this.etargetinner.focus()
+      if (props.etargetinner != null) {
+        props.etargetinner.focus()
       }
+    }
+    const hideBackdropClass = computed(() => {
+      return props.hideBackdrop ? 'hide-backdrop' : ''
+    })
+
+    return {
+      closebtn,
+      hideBackdropClass
     }
   }
 }

@@ -115,7 +115,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import uuAccordion from '@/components/uu-components/Accordion.vue'
+import uuAccordionitem from '@/components/uu-components/AccordionItem.vue'
 const navMenuItems = [
   {
     navMenuTitle: 'Rule',
@@ -214,6 +216,7 @@ export default {
   //     }
   //   },
   // },
+  components: { uuAccordionitem, uuAccordion },
   data () {
     return {
       navMenuItems,

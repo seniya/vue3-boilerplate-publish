@@ -42,40 +42,38 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { getRandomId } from '@/utils/common.function'
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
   props: {
     position: {
       type: String,
       default: ''
     }
   },
-  data () {
+  setup () {
+    const dropdownCont = ref(false)
+    const dropdownBack = ref(false)
+
+    const randomString = getRandomId()
+
+    const dropdownToggle = () => {
+      dropdownCont.value = !dropdownCont.value
+      dropdownBack.value = !dropdownBack.value
+    }
+
     return {
-      dropdownCont: false,
-      dropdownBack: false
-    }
-  },
-  computed: {
-    // 랜덤아이디생성
-    randomString () {
-      var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
-      var stringLength = 15
-      var randomstring = ''
-      for (var i = 0; i < stringLength; i++) {
-        var rnum = Math.floor(Math.random() * chars.length)
-        randomstring += chars.substring(rnum, rnum + 1)
-      }
-      return randomstring
-    }
-  },
-  methods: {
-    dropdownToggle () {
-      this.dropdownCont = !this.dropdownCont
-      this.dropdownBack = !this.dropdownBack
+      // position: props.position,
+      dropdownCont,
+      dropdownBack,
+      randomString,
+
+      // action
+      dropdownToggle
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

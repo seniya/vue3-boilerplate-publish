@@ -21,11 +21,11 @@ const basicLibsInput = (): Promise<typeof import('*.vue')> => import('@/views/_g
 const basicLibsLoader = (): Promise<typeof import('*.vue')> => import('@/views/_guide/basic-libs/libsLoader.vue')
 const basicLibsCard = (): Promise<typeof import('*.vue')> => import('@/views/_guide/basic-libs/libsCard.vue')
 
-/*
 // uu-components
 const uuLibsAccordion = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsAccordion.vue')
 const uuLibsBubble = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsBubble.vue')
 const uuLibsDropdown = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsDropdown.vue')
+/*
 const uuLibsIcon = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsIcon.vue')
 const uuLibsModal = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsModal.vue')
 const uuLibsStepper = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsStepper.vue')
@@ -81,14 +81,14 @@ export default {
     { component: basicLibsRadio, path: '/basic-libs/libsRadio' },
     { component: basicLibsInput, path: '/basic-libs/libsInput' },
     { component: basicLibsLoader, path: '/basic-libs/libsLoader' },
-    { component: basicLibsCard, path: '/basic-libs/libsCard' }
+    { component: basicLibsCard, path: '/basic-libs/libsCard' },
 
-    /*
     // uu-components
     { path: '/uu-libs', redirect: '/uu-libs/uuLibsAccordion' },
     { component: uuLibsAccordion, path: '/uu-libs/uuLibsAccordion' },
     { component: uuLibsBubble, path: '/uu-libs/uuLibsBubble' },
-    { component: uuLibsDropdown, path: '/uu-libs/uuLibsDropdown' },
+    { component: uuLibsDropdown, path: '/uu-libs/uuLibsDropdown' }
+    /*
     { component: uuLibsIcon, path: '/uu-libs/uuLibsIcon' },
     { component: uuLibsModal, path: '/uu-libs/uuLibsModal' },
     { component: uuLibsStepper, path: '/uu-libs/uuLibsStepper' },
