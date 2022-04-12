@@ -14,11 +14,10 @@
           <li
             v-for="(item, index) in navMenuItems"
             :key="index"
-            @click="navMenuItemClick(index)"
           >
-            <router-link to="">
+            <a @click="navMenuItemClick(index)">
               {{ item.navMenuTitle }}
-            </router-link>
+            </a>
           </li>
         </ul>
         <button
@@ -26,12 +25,6 @@
           @click="$router.push('/')"
         >
           MYDATA
-        </button>
-        <button
-          class="btn-menu"
-          @click="toggleNav()"
-        >
-          M
         </button>
       </div>
     </header>
@@ -116,8 +109,12 @@
 </template>
 
 <script lang="ts">
-import uuAccordion from '@/components/uu-components/Accordion.vue'
-import uuAccordionitem from '@/components/uu-components/AccordionItem.vue'
+import { computed, defineComponent, onMounted, reactive, toRefs } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+
+import accordion from '@/components/uu-components/Accordion.vue'
+import accordionitem from '@/components/uu-components/AccordionItem.vue'
+
 const navMenuItems = [
   {
     navMenuTitle: 'Rule',
@@ -207,71 +204,82 @@ const navMenuItems = [
   }
 ]
 
-export default {
-  // props: {
-  //   subNavIndex: {
-  //     type: Number,
-  //     default: function () {
-  //       return 0
-  //     }
-  //   },
-  // },
-  components: { uuAccordionitem, uuAccordion },
-  data () {
-    return {
+export default defineComponent({
+  name: 'guide-container',
+  components: {
+    'uu-accordion': accordion,
+    'uu-accordionitem': accordionitem
+  },
+  setup () {
+    const router = useRouter()
+    const route = useRoute()
+
+    const state = reactive({
       navMenuItems,
       navIndex: 0,
       subNavIndex: 0,
       active: false
+    })
+
+    const asideItems = computed(() => {
+      return navMenuItems[state.navIndex].asideItems
+    })
+    const navMenuLink = computed(() => {
+      return navMenuItems[state.navIndex].link
+    })
+    const pageTitle = computed(() => {
+      return asideItems.value[state.subNavIndex].subNavMenu
+    })
+    const navMenuTitle = computed(() => {
+      return navMenuItems[state.navIndex].navMenuTitle
+    })
+
+    function navMenuItemClick (selectedIndexNav: number) {
+      state.navIndex = selectedIndexNav
+      state.subNavIndex = 0
+      router.push({ path: navMenuLink.value })
     }
-  },
-  computed: {
-    asideItems () {
-      return this.navMenuItems[this.navIndex].asideItems
-    },
-    navMenuLink () {
-      return this.navMenuItems[this.navIndex].link
-    },
-    pageTitle () {
-      return this.asideItems[this.subNavIndex].subNavMenu
-    },
-    navMenuTitle () {
-      return this.navMenuItems[this.navIndex].navMenuTitle
+
+    function subMenuItemClick (selectedIndexAside: number) {
+      state.subNavIndex = selectedIndexAside
     }
-  },
-  mounted () {
-    console.log(this.$route.path)
-    this.navIndex = navMenuItems.findIndex((item) =>
-      this.$route.path.includes(item.link)
-    )
-    this.subNavIndex = navMenuItems[
-      this.navIndex
-    ].asideItems.findIndex((item) => this.$route.path.includes(item.subNavUrl))
-  },
-  // beforeDestroy () {
-  //   document.body.style.overflow = ''
-  // },
-  methods: {
-    navMenuItemClick (selectedIndexNav) {
-      this.navIndex = selectedIndexNav
-      this.subNavIndex = 0
-      // this.$router.push({ path: this.navMenuLink }).catch(() => {})
-    },
-    subMenuItemClick (selectedIndexAside) {
-      this.subNavIndex = selectedIndexAside
-    },
-    toggleNav () {
-      this.active = !this.active
-      if (this.active) {
+
+    function toggleNav () {
+      state.active = !state.active
+      if (state.active) {
         document.body.style.overflow = 'hidden'
       } else {
         document.body.style.overflow = ''
       }
-    },
-    asideNav () {
-      this.active = !this.active
+    }
+
+    function asideNav () {
+      state.active = !state.active
       document.body.style.overflow = ''
     }
+
+    onMounted(() => {
+      console.log(route.path)
+      state.navIndex = navMenuItems.findIndex((item) =>
+        route.path.includes(item.link)
+      )
+      state.subNavIndex = navMenuItems[
+        state.navIndex
+      ].asideItems.findIndex((item) => route.path.includes(item.subNavUrl))
+    })
+
+    return {
+      asideItems,
+      navMenuLink,
+      pageTitle,
+      navMenuTitle,
+      navMenuItemClick,
+      subMenuItemClick,
+      toggleNav,
+      asideNav,
+      ...toRefs(state)
+    }
   }
-}
+})
+
 </script>
