@@ -168,17 +168,15 @@ option: [position=""] bottom-right || bottom-left || top-right || top-left
 import Prism from 'prismjs'
 import uuDropdown from '@/components/uu-components/Dropdown.vue'
 import uuIcon from '@/components/uu-components/Icon.vue'
-export default {
+import { defineComponent, onMounted } from '@vue/runtime-core'
+export default defineComponent({
   components: { uuDropdown, uuIcon },
-  data () {
-    return {
-
-    }
-  },
-  mounted () {
-    Prism.highlightAll()
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

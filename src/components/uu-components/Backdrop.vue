@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import { computed } from '@vue/runtime-core'
-export default {
+import { computed, defineComponent } from '@vue/runtime-core'
+export default defineComponent({
   props: {
     etarget: {
       type: HTMLElement,
@@ -43,7 +43,7 @@ export default {
       hideBackdropClass
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

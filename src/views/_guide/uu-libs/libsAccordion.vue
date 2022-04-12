@@ -456,7 +456,9 @@
 import Prism from 'prismjs'
 import uuAccordion from '@/components/uu-components/Accordion.vue'
 import uuAccordionitem from '@/components/uu-components/AccordionItem.vue'
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   name: 'pageOne',
   components: { uuAccordionitem, uuAccordion },
   data () {
@@ -484,7 +486,7 @@ export default {
   mounted () {
     Prism.highlightAll()
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
