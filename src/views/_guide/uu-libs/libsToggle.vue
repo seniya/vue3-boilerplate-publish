@@ -64,11 +64,19 @@
 
 <script>
 import Prism from 'prismjs'
-export default {
-  mounted () {
-    Prism.highlightAll()
+import uuToggle from '@/components/uu-components/Toggle.vue'
+import { defineComponent, onMounted } from 'vue'
+
+export default defineComponent({
+  components: {
+    uuToggle
+  },
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

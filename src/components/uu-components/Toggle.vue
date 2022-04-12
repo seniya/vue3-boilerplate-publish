@@ -13,11 +13,10 @@
   </label>
 </template>
 
-<script>
-import { computed, defineComponent, reactive, toRefs, watch } from '@vue/runtime-core'
+<script lang="ts">
+import { computed, defineComponent, ref, watch } from 'vue'
 
 export default defineComponent({
-  name: 'uu-toggle',
   props: {
     disabled: {
       type: Boolean
@@ -27,64 +26,28 @@ export default defineComponent({
     }
   },
   setup (props, { emit }) {
-    const state = reactive({
-      value: '',
-      // value:  props.checked,
-      isStatus: computed(() => props.disabled === true ? 'no-active' : ''),
-      isDisabled: computed(() => props.disabled)
-    })
+    const state = ref(props.checked)
 
-    // onMounted(() => {
-    //   state.value = props.checked
-    // })
+    const isStatus = computed(() => props.disabled === true ? 'no-active' : '')
+    const isDisabled = computed(() => props.disabled)
 
-    watch(() => state.value, (oldVal, newVal) => {
+    watch(() => state.value, () => {
       emit('status', state.value)
     })
 
     function sendStatus () {
-      emit('status', this.value)
+      emit('status', state.value)
     }
 
     return {
-      ...toRefs(state),
-      sendStatus
+      state,
+      sendStatus,
+      isStatus,
+      isDisabled
     }
   }
 })
 
-// export default {
-//   props: {
-//     disabled: Boolean,
-//     checked: Boolean
-//   },
-//   data () {
-//     return {
-//       value: ''
-//     }
-//   },
-//   computed: {
-//     isStatus () {
-//       return this.disabled === true ? 'no-active' : ''
-//     },
-//     isDisabled () {
-//       return this.disabled
-//     }
-//   },
-//   // watch: {
-//   //   value: function () {
-//   //     this.$emit('status', this.value)
-//   //   }
-//   // },
-//   mounted () {
-//     this.value = this.checked
-//   },
-//   methods: {
-//     sendStatus () {
-//       this.$emit('status', this.value)
-//     }
-//   }
-// }
 </script>
 
 <style lang="scss" scoped>

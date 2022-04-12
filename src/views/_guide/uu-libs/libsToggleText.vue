@@ -112,18 +112,28 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
-export default {
-  mounted () {
-    Prism.highlightAll()
+import uuToggletext from '@/components/uu-components/ToggleText.vue'
+import { defineComponent, onMounted } from '@vue/runtime-core'
+
+export default defineComponent({
+  components: {
+    uuToggletext
   },
-  methods: {
-    toggle (selected) {
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+    function toggle (selected: string) {
       console.log('selected', selected)
     }
+
+    return {
+      toggle
+    }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

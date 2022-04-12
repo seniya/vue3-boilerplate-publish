@@ -5623,13 +5623,22 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
-export default {
-  mounted () {
-    Prism.highlightAll()
+import uuIcon from '@/components/uu-components/Icon.vue'
+import { defineComponent, onMounted } from 'vue'
+
+export default defineComponent({
+  components: {
+    uuIcon
+  },
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
+
 </script>
 
 <style lang="scss" scoped>

@@ -431,70 +431,88 @@ export default {
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Prism from 'prismjs'
-export default {
-  data () {
-    return {
-      etarget: null,
+import uuBackdrop from '@/components/uu-components/Backdrop.vue'
+import uuModal from '@/components/uu-components/Modal.vue'
+import { defineComponent, onMounted, Ref, ref } from 'vue'
 
-      // default
-      defaultModal: false,
-
-      // inner modal
-      innerModal: false,
-      etargetinner: null,
-
-      // bottom modal
-      bottomModal: false,
-
-      // full modal
-      fullModal: false,
-
-      // alert modal
-      alertModal: false
-    }
+export default defineComponent({
+  components: {
+    uuBackdrop,
+    uuModal
   },
-  mounted () {
-    Prism.highlightAll()
-    console.log()
-  },
-  methods: {
+  setup () {
+    const etarget: Ref<HTMLInputElement|null> = ref(null)
     // default
-    defaultModalShow (e) {
-      this.defaultModal = !this.defaultModal
-      this.etarget = e.target
-    },
-    defaultModalHide () {
-      this.defaultModal = !this.defaultModal
-      this.etarget.focus()
-    },
+    const defaultModal = ref(false)
     // inner modal
-    innerModalShow (e) {
-      this.innerModal = !this.innerModal
-      this.etargetinner = e.target
-    },
+    const innerModal = ref(false)
+    const etargetinner: Ref<HTMLInputElement|null> = ref(null)
     // bottom modal
-    bottomModalShow (e) {
-      this.bottomModal = !this.bottomModal
-      this.etarget = e.target
-    },
+    const bottomModal = ref(false)
     // full modal
-    fullModalShow (e) {
-      this.fullModal = !this.fullModal
-      this.etarget = e.target
-    },
+    const fullModal = ref(false)
     // alert modal
-    alertModalShow (e) {
-      this.alertModal = !this.alertModal
-      this.etarget = e.target
-    },
-    alertModalHide () {
-      this.alertModal = !this.alertModal
-      this.etarget.focus()
+    const alertModal = ref(false)
+
+    onMounted(() => {
+      Prism.highlightAll()
+      console.log()
+    })
+
+    function defaultModalShow (e: { target: HTMLInputElement }) {
+      defaultModal.value = !defaultModal.value
+      etarget.value = e.target
+    }
+    function defaultModalHide () {
+      defaultModal.value = !defaultModal.value
+      etarget.value?.focus()
+    }
+    // inner modal
+    function innerModalShow (e: { target: HTMLInputElement }) {
+      innerModal.value = !innerModal.value
+      etargetinner.value = e.target
+    }
+    // bottom modal
+    function bottomModalShow (e: { target: HTMLInputElement }) {
+      bottomModal.value = !bottomModal.value
+      etarget.value = e.target
+    }
+    // full modal
+    function fullModalShow (e: { target: HTMLInputElement }) {
+      fullModal.value = !fullModal.value
+      etarget.value = e.target
+    }
+    // alert modal
+    function alertModalShow (e: { target: HTMLInputElement }) {
+      alertModal.value = !alertModal.value
+      etarget.value = e.target
+    }
+    function alertModalHide () {
+      alertModal.value = !alertModal.value
+      etarget.value?.focus()
+    }
+
+    return {
+      etarget,
+      defaultModal,
+      innerModal,
+      etargetinner,
+      bottomModal,
+      fullModal,
+      alertModal,
+      defaultModalShow,
+      defaultModalHide,
+      innerModalShow,
+      bottomModalShow,
+      fullModalShow,
+      alertModalShow,
+      alertModalHide
     }
   }
-}
+})
+
 </script>
 
 <style lang="scss" scoped>

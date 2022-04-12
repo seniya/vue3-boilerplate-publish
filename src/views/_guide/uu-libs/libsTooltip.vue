@@ -1153,7 +1153,13 @@
 <script>
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
+import uuTooltip from '@/components/uu-components/Tooltip.vue'
+import uuIcon from '@/components/uu-components/Icon.vue'
 export default {
+  components: {
+    uuTooltip,
+    uuIcon
+  },
   data () {
     return {
       selectedValue: '1'

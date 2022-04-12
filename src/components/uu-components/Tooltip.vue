@@ -117,14 +117,14 @@
   </span>
 </template>
 
-<script>
-// import { defineComponent } from '@vue/runtime-core';
+<script lang="ts">
+import { computed, defineComponent, onMounted, reactive, toRefs } from 'vue'
+import uuIcon from '@/components/uu-components/Icon.vue'
 
-// export default defineComponent({
-
-// })
-
-export default {
+export default defineComponent({
+  components: {
+    uuIcon
+  },
   props: {
     type: {
       type: String,
@@ -231,18 +231,57 @@ export default {
       default: false
     }
   },
-  data () {
-    return {
+  setup (props) {
+    const state = reactive({
       tooltipShow: true,
       tailTop: 'auto',
       tailBottom: 'auto',
       tailLeft: 'auto',
       tailRight: 'auto'
-    }
-  },
-  computed: {
-    // 랜덤아이디생성
-    randomString () {
+    })
+
+    onMounted(() => {
+      if (props.top) {
+        state.tailTop = 'calc(100% + 8px)'
+      }
+      if (props.bottom) {
+        state.tailBottom = 'calc(100% + 8px)'
+      }
+      if (props.left || props.center) {
+        state.tailLeft = '50%'
+      }
+      if (props.right) {
+        state.tailRight = '50%'
+      }
+      if (props.type === 'type1') {
+        state.tooltipShow = false
+      }
+      if (props.type === 'type2' && props.small) {
+        const tootipBtn = document.querySelector('.btn')
+        if (!tootipBtn?.classList.contains('btn-underline') && !props.hideClose) {
+          const tooltip2 = document.querySelectorAll('.tooltip2')
+          for (let i = 0; i < tooltip2.length; i++) {
+            tooltip2[i].classList.add('hide-close')
+          }
+        }
+      }
+      if (props.tipPosition === 'fixed') {
+        if (props.tipTop) {
+          state.tailTop = props.tipTop + 'px'
+        }
+        if (props.tipBottom) {
+          state.tailBottom = props.tipBottom + 'px'
+        }
+        if (props.tipRight) {
+          state.tailRight = props.tipRight + 'px'
+        }
+        if (props.tipLeft) {
+          state.tailLeft = props.tipLeft + 'px'
+        }
+      }
+    })
+
+    const randomString = computed(() => {
       const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
       const stringLength = 15
       let randomstring = ''
@@ -251,47 +290,12 @@ export default {
         randomstring += chars.substring(rnum, rnum + 1)
       }
       return randomstring
-    }
-  },
-  mounted () {
-    if (this.top) {
-      this.tailTop = 'calc(100% + 8px)'
-    }
-    if (this.bottom) {
-      this.tailBottom = 'calc(100% + 8px)'
-    }
-    if (this.left || this.center) {
-      this.tailLeft = '50%'
-    }
-    if (this.right) {
-      this.tailRight = '50%'
-    }
-    if (this.type === 'type1') {
-      this.tooltipShow = false
-    }
-    if (this.type === 'type2' && this.small) {
-      const tootipBtn = document.querySelector('.btn')
-      if (!tootipBtn.classList.contains('btn-underline') && !this.hideClose) {
-        const tooltip2 = document.querySelectorAll('.tooltip2')
-        for (let i = 0; i < tooltip2.length; i++) {
-          tooltip2[i].classList.add('hide-close')
-        }
-      }
-    }
-    if (this.tipPosition === 'fixed') {
-      if (this.tipTop) {
-        this.tailTop = this.tipTop + 'px'
-      }
-      if (this.tipBottom) {
-        this.tailBottom = this.tipBottom + 'px'
-      }
-      if (this.tipRight) {
-        this.tailRight = this.tipRight + 'px'
-      }
-      if (this.tipLeft) {
-        this.tailLeft = this.tipLeft + 'px'
-      }
+    })
+
+    return {
+      ...toRefs(state),
+      randomString
     }
   }
-}
+})
 </script>
