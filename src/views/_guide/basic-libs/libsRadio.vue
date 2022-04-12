@@ -530,27 +530,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<script>
-import Prism from 'prismjs'
-import 'prismjs/themes/prism.css'
-export default {
-  data () {
-    return {
-      selectedValue: '1'
-    }
-  },
-  mounted () {
-    Prism.highlightAll()
-  },
-  methods: {
-    changeValue (newValue) {
-      this.selectedValue = newValue
-    }
-  }
-}
-</script>
-
-<style lang="scss" scoped>
-@import "@/assets/scss/guide.scss";
-</style>
