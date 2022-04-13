@@ -3516,51 +3516,49 @@ $loaderSpeed: 1000ms !default;
   &.type2 {
     height: 13.4rem !important;
   }
-  .vue-scroll-picker-list {
-    .vue-scroll-picker-list-rotator {
-     transform: translateY(-2.6rem);
-      .vue-scroll-picker-item {
-        height: 5.2rem;
+  .vue-scroll-picker-rotator {
+    transform: translateY(-2.6rem);
+    .vue-scroll-picker-item {
+      height: 5.2rem;
+      color: $darkBlue100;
+      font-size: 1.6rem;
+      line-height: 5.2rem;
+      &.vue-scroll-picker-item-selected {
         color: $darkBlue100;
-        font-size: 1.6rem;
-        line-height: 5.2rem;
-        &.-selected {
-          color: $darkBlue100;
-          font-weight: $fontMedium;
-          font-size: 1.8rem;
-          transition: background-color .2s;
-        }
-        &:first-child.-selected {
-          // transform: translateY(0);
-        }
+        font-weight: $fontMedium;
+        font-size: 1.8rem;
+        transition: background-color .2s;
+      }
+      &:first-child.vue-scroll-picker-item-selected {
+        // transform: translateY(0);
       }
     }
-   }
-   .vue-scroll-picker-layer {
-     .top {
-      height: 8rem;
-      border: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
-     }
-     .middle {
-      z-index: -1;
-      top: 50%;
-      height: 5.2rem;
-      background-color: $bgLightBlue2;
-      border-radius: .6rem;
-      color: $darkBlue100;
-      font-weight: $fontMedium;
-      font-size: 1.8rem;
-      line-height: 5.2rem;
-      transform: translateY(-50%);
-     }
-     .bottom {
-      //height: calc(50% - 2.7rem);
-      height: 8rem;
-      border: 0;
-      background: linear-gradient(0, rgba(255,255,255,1) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
-     }
-   }
+  }
+  .vue-scroll-picker-layer {
+    .vue-scroll-picker-layer-top {
+    height: 8rem;
+    border: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
+    }
+    .vue-scroll-picker-layer-selection {
+    z-index: -1;
+    top: 50%;
+    height: 5.2rem;
+    background-color: $bgLightBlue2;
+    border-radius: .6rem;
+    color: $darkBlue100;
+    font-weight: $fontMedium;
+    font-size: 1.8rem;
+    line-height: 5.2rem;
+    transform: translateY(-50%);
+    }
+    .vue-scroll-picker-layer-bottom {
+    //height: calc(50% - 2.7rem);
+    height: 8rem;
+    border: 0;
+    background: linear-gradient(0, rgba(255,255,255,1) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
+    }
+  }
  }
 .scroll-picker-group {
   display: flex;

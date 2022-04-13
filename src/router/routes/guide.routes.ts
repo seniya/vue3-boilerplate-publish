@@ -46,11 +46,11 @@ const uiLibsDivArea = (): Promise<typeof import('*.vue')> => import('@/views/_gu
 const uiLibsDatePicker = (): Promise<typeof import('*.vue')> => import('@/views/_guide/ui-libs/libsDatePicker.vue')
 const uiLibsGraph = (): Promise<typeof import('*.vue')> => import('@/views/_guide/ui-libs/libsGraph.vue')
 // 라이브러리
-// const libsSwiper = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsSwiper.vue')
+const libsSwiper = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsSwiper.vue')
 const libsTab = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsTab.vue')
 const libsVueA11y = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsVueA11y.vue')
 const libsInfiniteScroll = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsInfiniteScroll.vue')
-// const libsScrollPicker = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsScrollPicker.vue')
+const libsScrollPicker = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsScrollPicker.vue')
 const libsHighcharts = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsHighcharts.vue')
 
 export default {
@@ -111,11 +111,11 @@ export default {
 
     // 라이브러리
     { path: '/libs', redirect: '/libs/swiper' },
-    // { component: libsSwiper, path: '/libs/swiper' },
+    { component: libsSwiper, path: '/libs/swiper' },
     { component: libsTab, path: '/libs/tab' },
     { component: libsVueA11y, path: '/libs/vuea11y' },
     { component: libsInfiniteScroll, path: '/libs/infinitescroll' },
-    { component: libsHighcharts, path: '/libs/highcharts' }
-    // { component: libsScrollPicker, path: '/libs/scrollpicker' },
+    { component: libsHighcharts, path: '/libs/highcharts' },
+    { component: libsScrollPicker, path: '/libs/scrollpicker' }
   ]
 }
