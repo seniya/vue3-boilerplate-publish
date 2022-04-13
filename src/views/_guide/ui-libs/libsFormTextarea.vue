@@ -76,14 +76,18 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, onMounted } from 'vue'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
-export default {
-  mounted () {
-    Prism.highlightAll()
+
+export default defineComponent({
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
