@@ -30,26 +30,28 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, reactive } from 'vue'
 // https://splidejs.com/integration-vue-splide/
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
+import { Splide, SplideSlide, Options as SplideOptions } from '@splidejs/vue-splide'
 import '@splidejs/splide/dist/css/themes/splide-default.min.css'
-export default {
+
+export default defineComponent({
   components: {
     Splide,
     SplideSlide
   },
-  data () {
-    return {
-      options: {
-        type: 'splide',
-        direction: 'ttb',
-        heightRatio: 0.6,
-        perPage: 1
-      }
-    }
+  setup () {
+    const options = reactive<SplideOptions>({
+      type: 'slide',
+      direction: 'ttb',
+      heightRatio: 0.6,
+      perPage: 1
+    })
+
+    return { options }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
