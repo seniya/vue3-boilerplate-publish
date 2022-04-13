@@ -20,7 +20,7 @@
         <button
           type="button"
           class="toast-button"
-          @click="$emit('click')"
+          @click="clickToastButton"
         >
           보기
         </button>
@@ -43,7 +43,8 @@ export default defineComponent({
       default: false
     }
   },
-  setup () {
+  emits: ['click'],
+  setup (_props, { emit }) {
     const slide = ref('')
     const openToast = ref(false)
     const target = ref(null)
@@ -58,6 +59,9 @@ export default defineComponent({
     function endTransition () {
       slide.value = 'slide-down'
     }
+    function clickToastButton () {
+      emit('click')
+    }
 
     const toast = ref<HTMLDivElement | null>(null)
 
@@ -70,7 +74,8 @@ export default defineComponent({
       openToast,
       target,
       showToast,
-      endTransition
+      endTransition,
+      clickToastButton
     }
   }
 })

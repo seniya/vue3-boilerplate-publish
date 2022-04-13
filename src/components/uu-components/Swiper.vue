@@ -5,7 +5,7 @@
       :has-track="false"
       :options="slideType"
       :class="[slideType === bullet ? 'bullet': '', classType === 'type3' ? 'type3': '', onlySlide? 'only-slide':'']"
-      @splide:moved="$emit('moved')"
+      @splide:moved="onMoved"
       @splide:drag="dragStart"
       @splide:dragged="dragEnd"
     >
@@ -123,6 +123,7 @@ export default defineComponent({
       default: 3000
     }
   },
+  emits: ['moved', 'event'],
   setup (props, { emit }) {
     let slideType: Ref<SplideOptions>
     const slideGroup = ref<SlideGroup[]>([])
@@ -175,6 +176,9 @@ export default defineComponent({
     const swiper = ref(null)
     const onlySlide = ref(false)
 
+    function onMoved () {
+      emit('moved')
+    }
     function dragStart () {
       document.body.style.overflow = 'hidden'
     }
@@ -226,6 +230,7 @@ export default defineComponent({
       bullet,
       swiper,
       onlySlide,
+      onMoved,
       dragStart,
       dragEnd
     }

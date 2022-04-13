@@ -134,6 +134,7 @@ export default defineComponent({
       default: true
     }
   },
+  emits: ['tabmoved', 'custom'],
   setup (props, { emit }) {
     // tab menu
     const menu = reactive({
