@@ -29,7 +29,12 @@
       &lt;!-- default (value="0", min="0", max="100", step="1") --&gt;
       &lt;uu-stepper /&gt;
 
-      &lt;uu-stepper value="6" min="2" max="20" step="2" /&gt;
+      &lt;uu-stepper
+        value=&quot;6&quot;
+        min=&quot;2&quot;
+        max=&quot;20&quot;
+        step=&quot;2&quot;
+      /&gt;
               </code>
             </pre>
         </div>

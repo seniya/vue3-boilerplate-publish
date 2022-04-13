@@ -34,24 +34,28 @@
             <pre class="language-html">
               <code>
 &lt;button
-  type="button"
-  @click="open"
+  type=&quot;button&quot;
+  @click=&quot;open&quot;
 &gt;
   open Toast!!
 &lt;/button&gt;
 &lt;br&gt;
 &lt;button
-  type="button"
-  @click="btnOpen"
+  type=&quot;button&quot;
+  @click=&quot;btnOpen&quot;
 &gt;
   open Button Toast!!
 &lt;/button&gt;
-&lt;uu-toast ref="toast" :message="message" class="text-center"/&gt;
 &lt;uu-toast
-  ref="toast2"
+  ref=&quot;toast&quot;
+  :message=&quot;message&quot;
+  class=&quot;text-center&quot;
+/&gt;
+&lt;uu-toast
+  ref=&quot;toast2&quot;
   button
-  :message="message2"
-  @click="btnEvent"
+  :message=&quot;message2&quot;
+  @click=&quot;btnEvent&quot;
 /&gt;
               </code>
             </pre>
@@ -59,24 +63,42 @@
           <div class="view-code">
             <pre class="language-js">
               <code>
-export default {
-  data(){
-    return{
-      message: "이건 텍스트만 있는 \n토스트입니다.",
-      message2: "이건 버튼이 있는 토스트입니다."
-    }
+export default defineComponent({
+  components: {
+    &apos;uu-toast&apos;: Toast
   },
-  methods: {
-    open(){
-      this.$refs.toast.showToast();
-    },
-    btnOpen(){
-      this.$refs.toast2.showToast();
-    },
-    btnEvent(){
-      console.log("btnEvent");
+  setup () {
+    const message = ref(&apos;이건 텍스트만 있는 \n토스트입니다.&apos;)
+    const message2 = (&apos;이건 버튼이 있는 토스트입니다.&apos;)
+
+    const toast = ref&lt;InstanceType&lt;typeof Toast&gt; | null&gt;(null)
+    const toast2 = ref&lt;InstanceType&lt;typeof Toast&gt; | null&gt;(null)
+
+    function open () {
+      toast.value?.showToast()
+    }
+    function btnOpen () {
+      toast2.value?.showToast()
+    }
+    function btnEvent () {
+      console.log(&apos;btnEvent&apos;)
+    }
+
+    onMounted(() =&gt; {
+      Prism.highlightAll()
+    })
+
+    return {
+      message,
+      message2,
+      toast,
+      toast2,
+      open,
+      btnOpen,
+      btnEvent
     }
   }
+})
               </code>
             </pre>
           </div>

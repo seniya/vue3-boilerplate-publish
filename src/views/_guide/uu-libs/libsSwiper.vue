@@ -45,19 +45,27 @@
             <pre>
                 <code class="language-html">
 &lt;uu-swiper
-  type="basic"
-  slide="3"
-  width="30rem"
-  height="40rem"
+  type=&quot;basic&quot;
+  slide=&quot;3&quot;
+  width=&quot;30rem&quot;
+  height=&quot;40rem&quot;
+  @moved=&quot;movedEvent&quot;
+  @event=&quot;event&quot;
 &gt;
   &lt;template v-slot:slide1&gt;
-    basic1
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      basic1
+    &lt;/div&gt;
   &lt;/template&gt;
   &lt;template v-slot:slide2&gt;
-    basic2
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      basic2
+    &lt;/div&gt;
   &lt;/template&gt;
   &lt;template v-slot:slide3&gt;
-    basic3
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      basic3
+    &lt;/div&gt;
   &lt;/template&gt;
 &lt;/uu-swiper&gt;
                 </code>
@@ -94,18 +102,24 @@
                 <code class="language-html">
 &lt;!-- Swiper progress --&gt;
 &lt;uu-swiper
-  type="progress"
-  slide="3"
-  height="40rem"
+  type=&quot;progress&quot;
+  slide=&quot;3&quot;
+  height=&quot;40rem&quot;
 &gt;
   &lt;template v-slot:slide1&gt;
-    progress1
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      progress1
+    &lt;/div&gt;
   &lt;/template&gt;
   &lt;template v-slot:slide2&gt;
-    progress2
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      progress2
+    &lt;/div&gt;
   &lt;/template&gt;
   &lt;template v-slot:slide3&gt;
-    progress3
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      progress3
+    &lt;/div&gt;
   &lt;/template&gt;
 &lt;/uu-swiper&gt;
 &lt;!-- // Swiper progress --&gt;
@@ -140,28 +154,29 @@
           <div class="view-code">
             <pre>
                 <code class="language-html">
-    &lt;!-- 기본 loop로 되어 있으며 mode="slide" 추가시 단방향 --&gt;
-    &lt;!-- Swiper bullet --&gt;
-    &lt;uu-swiper
-      type="bullet"
-      slide="2"
-      height="40rem"
-      color="black"
-      class-type="type1"
-      auto
-    &gt;
-      &lt;template v-slot:slide1&gt;
-        &lt;div class="slide-inner"&gt;
-          bullet1
-        &lt;/div&gt;
-      &lt;/template&gt;
-      &lt;template v-slot:slide2&gt;
-        &lt;div class="slide-inner"&gt;
-          bullet2
-        &lt;/div&gt;
-      &lt;/template&gt;
-    &lt;/uu-swiper&gt;
-    &lt;!-- // Swiper bullet --&gt;
+&lt;!-- 기본 loop로 되어 있으며 mode="slide" 추가시 단방향 --&gt;
+&lt;!-- Swiper bullet --&gt;
+&lt;uu-swiper
+  type=&quot;bullet&quot;
+  slide=&quot;2&quot;
+  height=&quot;40rem&quot;
+  color=&quot;black&quot;
+  class-type=&quot;type1&quot;
+  auto
+  @event=&quot;event&quot;
+&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      bullet1
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      bullet2
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-swiper&gt;
+&lt;!-- // Swiper bullet --&gt;
                 </code>
             </pre>
           </div>
@@ -192,27 +207,27 @@
           <div class="view-code">
             <pre>
                 <code class="language-html">
-    &lt;!-- 기본 loop로 되어 있으며 mode="slide" 추가시 단방향 --&gt;
-    &lt;!-- Swiper bullet --&gt;
-    &lt;uu-swiper
-      type="bullet"
-      slide="2"
-      height="20rem"
-      color="black"
-      class-type="type2"
-    &gt;
-      &lt;template v-slot:slide1&gt;
-        &lt;div class="slide-inner"&gt;
-          bullet1
-        &lt;/div&gt;
-      &lt;/template&gt;
-      &lt;template v-slot:slide2&gt;
-        &lt;div class="slide-inner"&gt;
-          bullet2
-        &lt;/div&gt;
-      &lt;/template&gt;
-    &lt;/uu-swiper&gt;
-    &lt;!-- // Swiper bullet --&gt;
+&lt;!-- 기본 loop로 되어 있으며 mode="slide" 추가시 단방향 --&gt;
+&lt;!-- Swiper bullet --&gt;
+&lt;uu-swiper
+  type=&quot;bullet&quot;
+  slide=&quot;2&quot;
+  height=&quot;20rem&quot;
+  color=&quot;black&quot;
+  class-type=&quot;type2&quot;
+&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      bullet1
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;slide-inner&quot;&gt;
+      bullet2
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-swiper&gt;
+&lt;!-- // Swiper bullet --&gt;
                 </code>
             </pre>
           </div>
@@ -247,34 +262,34 @@
           <div class="view-code">
             <pre>
                 <code class="language-html">
-    &lt;!-- position="" || bottom-left || bottom-right || bottom-center || top-left || top-right || top-center // default: bottom-center --&gt;
-    &lt;!-- gap="" || 1.6rem || 16px // default: 0 --&gt;
-    &lt;!-- padding-left="" || 1.6rem || 16px // default: 0 --&gt;
-    &lt;!-- padding-right="" || 1.6rem || 16px // default: 0 --&gt;
-    &lt;!-- Swiper bullet --&gt;
-    &lt;uu-swiper
-      type="bullet"
-      slide="2"
-      height="20rem"
-      class-type="type3"
-      color="black"
-      position="bottom-left"
-      gap="1.6rem"
-      padding-left="1.6rem"
-      padding-right="1.6rem"
-    &gt;
-      &lt;template v-slot:slide1&gt;
-        &lt;div class="slide-inner"&gt;
-          bullet1
-        &lt;/div&gt;
-      &lt;/template&gt;
-      &lt;template v-slot:slide2&gt;
-        &lt;div class="slide-inner"&gt;
-          bullet2
-        &lt;/div&gt;
-      &lt;/template&gt;
-    &lt;/uu-swiper&gt;
-    &lt;!-- // Swiper bullet --&gt;
+  &lt;!-- position="" || bottom-left || bottom-right || bottom-center || top-left || top-right || top-center // default: bottom-center --&gt;
+  &lt;!-- gap="" || 1.6rem || 16px // default: 0 --&gt;
+  &lt;!-- padding-left="" || 1.6rem || 16px // default: 0 --&gt;
+  &lt;!-- padding-right="" || 1.6rem || 16px // default: 0 --&gt;
+  &lt;!-- Swiper bullet --&gt;
+  &lt;uu-swiper
+    type=&quot;bullet&quot;
+    slide=&quot;2&quot;
+    height=&quot;20rem&quot;
+    class-type=&quot;type3&quot;
+    color=&quot;black&quot;
+    position=&quot;bottom-left&quot;
+    gap=&quot;1.6rem&quot;
+    padding-left=&quot;1.6rem&quot;
+    padding-right=&quot;1.6rem&quot;
+  &gt;
+    &lt;template v-slot:slide1&gt;
+      &lt;div class=&quot;slide-inner&quot;&gt;
+        bullet1
+      &lt;/div&gt;
+    &lt;/template&gt;
+    &lt;template v-slot:slide2&gt;
+      &lt;div class=&quot;slide-inner&quot;&gt;
+        bullet2
+      &lt;/div&gt;
+    &lt;/template&gt;
+  &lt;/uu-swiper&gt;
+  &lt;!-- // Swiper bullet --&gt;
                 </code>
             </pre>
           </div>
@@ -348,15 +363,22 @@
             <pre>
                 <code class="language-html">
 &lt;uu-swiper
-  type="custom"
-  slide="2"
-  :custom="custom"
+  type=&quot;custom&quot;
+  slide=&quot;2&quot;
+  :custom=&quot;custom&quot;
 &gt;
   &lt;template v-slot:slide1&gt;
-    custom1
+    &lt;div style=&quot;background-color: red&quot;&gt;
+      custom1
+    &lt;/div&gt;
   &lt;/template&gt;
   &lt;template v-slot:slide2&gt;
-    custom2
+    &lt;div style=&quot;height: 100%; background-color: black; overflow-y: auto; color:#fff;&quot;&gt;
+      custom2
+      &lt;p style=&quot;height:1000px&quot;&gt;
+        height: 100%; background-color: black; overflow-y: auto; color:#fff;
+      &lt;/p&gt;
+    &lt;/div&gt;
   &lt;/template&gt;
 &lt;/uu-swiper&gt;
                 </code>
@@ -364,22 +386,22 @@
 
             <pre>
                 <code class="language-js">
-export default {
-  data () {
-    return {
-      custom: {
-        type: 'slide',
-        fixedWidth: '40rem',
-        height: '40rem',
-        padding: '2.4rem',
-        gap: '1.6rem',
-        focus: 'center',
-        arrows: false,
-        pagination: false
-      }
-    }
+export default defineComponent({
+  setup () {
+    const custom = reactive({
+      type: &apos;slide&apos;,
+      width: &apos;100%&apos;,
+      height: &apos;10rem&apos;,
+      // heightRatio: 0.3, width값에 따라 height가 변함 width의 30% 너비를 높이로..
+      focus: &apos;center&apos;,
+      arrows: false,
+      pagination: false,
+      autoplay: false
+    })
+
+    return { custom }
   }
-}
+})
                 </code>
             </pre>
           </div>
