@@ -10,35 +10,46 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 // https://peachscript.github.io/vue-infinite-loading/guide/#installation
+import { defineComponent, Ref, ref } from 'vue'
 import InfiniteLoading from 'vue-infinite-loading'
-export default {
+
+interface State {
+  complete: () => void;
+  loaded: () => void;
+  reset: () => void;
+  error: () => void;
+}
+
+export default defineComponent({
   components: {
     InfiniteLoading
   },
-  data () {
-    return {
-      list: []
-    }
-  },
-  methods: {
-    infiniteHandler ($state) {
-      if (this.list.length > 200) {
+  setup () {
+    const list: Ref<number[]> = ref([])
+
+    function infiniteHandler ($state: State) {
+      if (list.value.length > 200) {
         $state.complete()
       } else {
         setTimeout(() => {
-          var temp = []
-          for (var i = this.list.length; i <= this.list.length + 10; i++) {
+          const temp = []
+          for (let i = list.value.length; i <= list.value.length + 10; i++) {
             temp.push(i)
           }
-          this.list.push(...temp)
+          list.value.push(...temp)
           $state.loaded()
         }, 1000)
       }
     }
+
+    return {
+      list,
+      infiniteHandler
+    }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
