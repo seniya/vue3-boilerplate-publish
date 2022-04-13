@@ -71,23 +71,64 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;!-- default --&gt;
-      &lt;uu-tab :items="wallet" :class="'type2'"&gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div class="tab-slot" slot="slide1"&gt;탭1 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide2"&gt;탭2 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide3"&gt;탭3 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide4"&gt;탭4 내용 자유롭게 입력하기&lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  :items=&quot;wallet&quot;
+  :class=&quot;&apos;type2&apos;&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;template v-slot:slide3&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭3
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;template v-slot:slide4&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭44444
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            wallet: ['카드/계좌', '멤버십', '인증', '부가서비스']
-          }
-        },
-      }
+export default defineComponent({
+  setup () {
+    const wallet = ref([&apos;카드/계좌&apos;, &apos;멤버십&apos;, &apos;인증&apos;, &apos;부가서비스&apos;])
+    return { wallet }
+  }
+})
               </code>
             </pre>
           </div>
@@ -155,48 +196,66 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;uu-tab
-        :items="wallet"
-        :class="'type2'"
-        tab-name="type22"
-        active-bar
-        option="fade"
-        :cont-drag="false"
-      &gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div
-          slot="slide1"
-          class="tab-slot"
-        &gt;
-          &lt;div class="tab-content"&gt;
-            탭11
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div
-          slot="slide2"
-          class="tab-slot"
-        &gt;
-          &lt;div class="tab-content"&gt;
-            탭22
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div
-          slot="slide3"
-          class="tab-slot"
-        &gt;
-          &lt;div class="tab-content"&gt;
-            탭3
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div
-          slot="slide4"
-          class="tab-slot"
-        &gt;
-          &lt;div class="tab-content"&gt;
-            탭44444
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  :items=&quot;wallet&quot;
+  :class=&quot;&apos;type2&apos;&quot;
+  tab-name=&quot;type22&quot;
+  active-bar
+  option=&quot;fade&quot;
+  :cont-drag=&quot;false&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide3&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭3
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide4&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭44444
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
+              </code>
+              <code class="language-javascript">
+export default defineComponent({
+  setup () {
+    const wallet = ref([&apos;카드/계좌&apos;, &apos;멤버십&apos;, &apos;인증&apos;, &apos;부가서비스&apos;])
+    return { wallet }
+  }
+})
               </code>
             </pre>
           </div>
@@ -250,22 +309,52 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;uu-tab :items="wallet" :class="'type4'" start="1" option="slide" :cont-drag="false"&gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div class="tab-slot" slot="slide1"&gt;탭1 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide2"&gt;탭2 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide3"&gt;탭3 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide4"&gt;탭4 내용 자유롭게 입력하기&lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  :items=&quot;wallet&quot;
+  :class=&quot;&apos;type4&apos;&quot;
+  start=&quot;1&quot;
+  :cont-drag=&quot;false&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide3&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭3
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide4&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭44444
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            wallet: ['카드/계좌', '멤버십', '인증', '부가서비스']
-          }
-        },
-      }
+export default defineComponent({
+  setup () {
+    const wallet = ref([&apos;카드/계좌&apos;, &apos;멤버십&apos;, &apos;인증&apos;, &apos;부가서비스&apos;])
+    return { wallet }
+  }
+})
               </code>
             </pre>
           </div>
@@ -319,22 +408,52 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;uu-tab :items="wallet" :class="'type5'" start="1" option="slide" :cont-drag="false"&gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div class="tab-slot" slot="slide1"&gt;탭1 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide2"&gt;탭2 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide3"&gt;탭3 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide4"&gt;탭4 내용 자유롭게 입력하기&lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  :items=&quot;wallet&quot;
+  :class=&quot;&apos;type5&apos;&quot;
+  start=&quot;1&quot;
+  :cont-drag=&quot;false&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide3&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭3
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide4&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭44444
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            wallet: ['카드/계좌', '멤버십', '인증', '부가서비스']
-          }
-        },
-      }
+export default defineComponent({
+  setup () {
+    const wallet = ref([&apos;카드/계좌&apos;, &apos;멤버십&apos;, &apos;인증&apos;, &apos;부가서비스&apos;])
+    return { wallet }
+  }
+})
               </code>
             </pre>
           </div>
@@ -389,23 +508,55 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;!-- 그라데이션 :class="'type6 gradient'" 추가 --&gt;
-      &lt;uu-tab :items="wallet" :class="'type6 gradient'" start="1" option="fade" padding-left="2.4rem" padding-right="2.4rem" focus="center"&gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div class="tab-slot" slot="slide1"&gt;탭1 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide2"&gt;탭2 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide3"&gt;탭3 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide4"&gt;탭4 내용 자유롭게 입력하기&lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;!-- 그라데이션 :class="'type6 gradient'" 추가 --&gt;
+&lt;uu-tab
+  :items=&quot;wallet&quot;
+  :class=&quot;&apos;type6 gradient&apos;&quot;
+  start=&quot;1&quot;
+  padding-left=&quot;2.4rem&quot;
+  padding-right=&quot;2.4rem&quot;
+  focus=&quot;center&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide3&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭3
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide4&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭44444
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            wallet: ['카드/계좌', '멤버십', '인증', '부가서비스']
-          }
-        },
-      }
+export default defineComponent({
+  setup () {
+    const wallet = ref([&apos;카드/계좌&apos;, &apos;멤버십&apos;, &apos;인증&apos;, &apos;부가서비스&apos;])
+    return { wallet }
+  }
+})
               </code>
             </pre>
           </div>
@@ -457,22 +608,51 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;uu-tab :items="wallet" :class="'type7'" option="slide" :cont-drag="false"&gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div class="tab-slot" slot="slide1"&gt;탭1 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide2"&gt;탭2 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide3"&gt;탭3 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide4"&gt;탭4 내용 자유롭게 입력하기&lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  :items=&quot;wallet&quot;
+  :class=&quot;&apos;type7&apos;&quot;
+  :cont-drag=&quot;false&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide3&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭3
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide4&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭44444
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            wallet: ['카드/계좌', '멤버십', '인증', '부가서비스']
-          }
-        },
-      }
+export default defineComponent({
+  setup () {
+    const wallet = ref([&apos;카드/계좌&apos;, &apos;멤버십&apos;, &apos;인증&apos;, &apos;부가서비스&apos;])
+    return { wallet }
+  }
+})
               </code>
             </pre>
           </div>
@@ -513,52 +693,48 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;uu-tab
-        :items="search"
-        :class="'type1'"
-        start="1"
-        active-bar
-        menu-center
-        tab-name="search"
-        option="fade"
-        :cont-drag="false"
-      &gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div
-          slot="slide1"
-          class="tab-slot"
-        &gt;
-          &lt;div class="tab-content"&gt;
-            페이판 탭
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div
-          slot="slide2"
-          class="tab-slot"
-        &gt;
-          &lt;div class="tab-content"&gt;
-            신한카드 탭
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  :items=&quot;search&quot;
+  :class=&quot;&apos;type1&apos;&quot;
+  start=&quot;1&quot;
+  active-bar
+  menu-center
+  tab-name=&quot;search&quot;
+  :cont-drag=&quot;false&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        페이판 탭
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        신한카드 탭
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            search: [
-              {
-                name: '페이판',
-                count: 14
-              },
-              {
-                name: '신한카드',
-                count: 16
-              }
-            ],
-          }
-        },
+export default defineComponent({
+  setup () {
+    const search = ref([
+      {
+        name: &apos;페이판&apos;,
+        count: 14
+      },
+      {
+        name: &apos;신한카드&apos;,
+        count: 16
       }
+    ])
+    return { search }
+  }
+})
               </code>
             </pre>
           </div>
@@ -614,32 +790,54 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;!-- default --&gt;
-      &lt;uu-tab
-        tab-name="tabname8"
-        active-bar
-        menu-center
-        start="1"
-        :class="'type8'"
-        :items="wallet2"
-        :menu-drag="false"
-        :cont-drag="false"
-      &gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div class="tab-slot" slot="slide1"&gt;탭1 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide2"&gt;탭2 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide3"&gt;탭3 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide4"&gt;탭4 내용 자유롭게 입력하기&lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  tab-name=&quot;tabname8&quot;
+  active-bar
+  menu-center
+  start=&quot;1&quot;
+  :class=&quot;&apos;type8&apos;&quot;
+  :items=&quot;wallet2&quot;
+  :menu-drag=&quot;false&quot;
+  :cont-drag=&quot;false&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide3&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭3
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide4&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭44444
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            wallet2: ['카드/계좌', '멤버십', '인증', '부가']
-          }
-        },
-      }
+export default defineComponent({
+  setup () {
+    const wallet2 = ref([&apos;결제&apos;, &apos;송금/충전&apos;, &apos;대중교통&apos;, &apos;입출금&apos;])
+    return { wallet2 }
+  }
+})
               </code>
             </pre>
           </div>
@@ -688,31 +886,47 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;!-- default --&gt;
-      &lt;uu-tab
-        tab-name="tabname8-lg"
-        active-bar
-        menu-center
-        start="1"
-        :class="'type8 lg'"
-        :items="wallet3"
-        :menu-drag="false"
-        :cont-drag="false"
-      &gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div class="tab-slot" slot="slide1"&gt;탭1 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide2"&gt;탭2 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide3"&gt;탭3 내용 자유롭게 입력하기&lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  tab-name=&quot;tabname8-lg&quot;
+  active-bar
+  menu-center
+  start=&quot;1&quot;
+  :class=&quot;&apos;type8 lg&apos;&quot;
+  :items=&quot;wallet3&quot;
+  :menu-drag=&quot;false&quot;
+  :cont-drag=&quot;false&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide3&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭3
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            wallet3: ['결제', '송금/충전', '대중교통'],
-          }
-        },
-      }
+export default defineComponent({
+  setup () {
+    const wallet3 = ref([&apos;결제&apos;, &apos;송금/충전&apos;, &apos;대중교통&apos;])
+    return { wallet3 }
+  }
+})
               </code>
             </pre>
           </div>
@@ -754,30 +968,40 @@
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;!-- default --&gt;
-      &lt;uu-tab
-        tab-name="tabname8-sm"
-        active-bar
-        menu-center
-        start="1"
-        :class="'type8 sm'"
-        :items="wallet4"
-        :menu-drag="false"
-        :cont-drag="false"
-      &gt;
-        &lt;!-- slot 영역 --&gt;
-        &lt;div class="tab-slot" slot="slide1"&gt;탭1 내용 자유롭게 입력하기&lt;/div&gt;
-        &lt;div class="tab-slot" slot="slide2"&gt;탭2 내용 자유롭게 입력하기&lt;/div&gt;
-      &lt;/uu-tab&gt;
+&lt;uu-tab
+  tab-name=&quot;tabname8-sm&quot;
+  active-bar
+  menu-center
+  start=&quot;1&quot;
+  :class=&quot;&apos;type8 sm&apos;&quot;
+  :items=&quot;wallet4&quot;
+  :menu-drag=&quot;false&quot;
+  :cont-drag=&quot;false&quot;
+&gt;
+  &lt;!-- slot 영역 --&gt;
+  &lt;template v-slot:slide1&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭111&lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;template v-slot:slide2&gt;
+    &lt;div class=&quot;tab-slot&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        탭22
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+&lt;/uu-tab&gt;
               </code>
               <code class="language-javascript">
-      export default {
-        data () {
-          return {
-            wallet4: ['등록순', '최신순']
-          }
-        },
-      }
+export default defineComponent({
+  setup () {
+    const wallet4 = ref([&apos;등록순&apos;, &apos;최신순&apos;])
+    return { wallet4 }
+  }
+})
               </code>
             </pre>
           </div>
