@@ -38,48 +38,14 @@
   </div>
 </template>
 
-<script>
-// https://jiongks.name/vue-a11y-utils/#table-of-contents
-// import { VueFocusTrap } from "vue-a11y-utils";
-// https://github.com/vue-a11y/vue-focus-loop
+<script lang="ts">
 import { FocusLoop } from '@vue-a11y/focus-loop'
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
   components: {
-    // VueFocusTrap
     FocusLoop
-
-  },
-  data () {
-    return {
-      // shown: false
-    }
-  },
-
-  // watch: {
-  //   shown(value) {
-  //     if (value) {
-  //       setTimeout(() => {
-  //         const dialog = this.$refs.dialog;
-  //         dialog.open();
-  //       }, 50);
-  //     } else {
-  //       const dialog = this.$refs.dialog;
-  //       dialog.close(true);
-  //     }
-  //   }
-  // },
-  methods: {
-    // open() {
-    //   this.goFirst();
-    // },
-    // goFirst() {
-    //   this.$refs.email.focus();
-    // },
-    // goLast() {
-    //   this.$refs.cancel.focus();
-    // }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

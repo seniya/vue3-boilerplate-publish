@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@splidejs/vue-splide": "^0.6.3",
+    "@vue-a11y/focus-loop": "^1.1.0",
     "axios": "^0.26.1",
     "core-js": "^3.8.3",
     "dayjs": "^1.11.0",

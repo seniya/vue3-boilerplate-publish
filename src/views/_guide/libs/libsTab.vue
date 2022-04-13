@@ -4,58 +4,61 @@
       <div class="row">
         <div class="col-12">
           <div class="view-exam">
-            <TabWrapper v-model="activeTab">
-              <TabList label="Animals">
-                <TabActivator tab="dogs">
-                  Dogs
-                </TabActivator>
-                <TabActivator tab="cats">
-                  Cats
-                </TabActivator>
-              </TabList>
-              <TabPanel tab="dogs">
+            <tabs v-model="activeTab">
+              <tab val="dogs" label="dogs">
+              </tab>
+              <tab val="cats" label="cats">
+              </tab>
+            </tabs>
+            <tab-panels
+              v-model="activeTab"
+            >
+              <tab-panel val="dogs">
                 Dogs are pretty cool.  Here's some info about them.
-              </TabPanel>
-              <TabPanel tab="cats">
+              </tab-panel>
+              <tab-panel val="cats">
                 Cats are pretty neat too.  Here's some stuff about them!****
-              </TabPanel>
-            </TabWrapper>
+              </tab-panel>
+            </tab-panels>
           </div>
           <div class="view-code">
             <pre>
               <code class="language-html">
-      &lt;TabWrapper v-model="activeTab"&gt;
-        &lt;TabList label="Animals"&gt;
-          &lt;TabActivator tab="dogs"&gt;
-            Dogs
-          &lt;/TabActivator&gt;
-          &lt;TabActivator tab="cats"&gt;
-            Cats
-          &lt;/TabActivator&gt;
-        &lt;/TabList&gt;
-
-        &lt;TabPanel tab="dogs"&gt;
-          Dogs are pretty cool.  Here's some info about them.
-        &lt;/TabPanel&gt;
-        &lt;TabPanel tab="cats"&gt;
-          Cats are pretty neat too.  Here's some stuff about them!****
-        &lt;/TabPanel&gt;
-      &lt;/TabWrapper&gt;
+      &lt;tabs v-model=&quot;activeTab&quot;&gt;
+        &lt;tab val=&quot;dogs&quot; label=&quot;dogs&quot;&gt;
+        &lt;/tab&gt;
+        &lt;tab val=&quot;cats&quot; label=&quot;cats&quot;&gt;
+        &lt;/tab&gt;
+      &lt;/tabs&gt;
+      &lt;tab-panels
+        v-model=&quot;activeTab&quot;
+      &gt;
+        &lt;tab-panel val=&quot;dogs&quot;&gt;
+          Dogs are pretty cool.  Here&apos;s some info about them.
+        &lt;/tab-panel&gt;
+        &lt;tab-panel val=&quot;cats&quot;&gt;
+          Cats are pretty neat too.  Here&apos;s some stuff about them!****
+        &lt;/tab-panel&gt;
+      &lt;/tab-panels&gt;
               </code>
             </pre>
           </div>
           <div class="view-code">
             <pre>
               <code class="language-js">
-      import { TabActivator, TabList, TabPanel, TabWrapper } from '@a11y-kit/vue-tabs'
-      export default {
-        components: { TabActivator, TabList, TabPanel, TabWrapper },
-        data () {
+      import { Tabs, Tab, TabPanels, TabPanel } from 'vue3-tabs'
+      export default defineComponent({
+        components: { Tabs, Tab, TabPanels, TabPanel },
+        setup () {
+          const activeTab = ref('dogs')
+          onMounted(() => {
+            Prism.highlightAll()
+          })
           return {
-            activeTab: 'dogs'
+            activeTab
           }
         }
-      }
+      })
               </code>
             </pre>
           </div>
@@ -65,23 +68,23 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, onMounted, ref } from 'vue'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
-// https://www.npmjs.com/package/@a11y-kit/vue-tabs
-import { TabActivator, TabList, TabPanel, TabWrapper } from '@a11y-kit/vue-tabs'
-// import '@a11y-kit/vue-tabs/styles/simple.css'
-export default {
-  components: { TabActivator, TabList, TabPanel, TabWrapper },
-  data () {
+import { Tabs, Tab, TabPanels, TabPanel } from 'vue3-tabs'
+export default defineComponent({
+  components: { Tabs, Tab, TabPanels, TabPanel },
+  setup () {
+    const activeTab = ref('dogs')
+    onMounted(() => {
+      Prism.highlightAll()
+    })
     return {
-      activeTab: 'dogs'
+      activeTab
     }
-  },
-  mounted () {
-    Prism.highlightAll()
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

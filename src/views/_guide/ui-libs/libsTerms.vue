@@ -2827,14 +2827,21 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, onMounted } from 'vue'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
-export default {
-  mounted () {
-    Prism.highlightAll()
+import uuIcon from '@/components/uu-components/Icon.vue'
+import uuAccordion from '@/components/uu-components/Accordion.vue'
+import uuAccordionitem from '@/components/uu-components/AccordionItem.vue'
+export default defineComponent({
+  components: { uuIcon, uuAccordion, uuAccordionitem },
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
 </script>
 
 <style lang="scss">

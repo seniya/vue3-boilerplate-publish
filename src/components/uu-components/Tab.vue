@@ -148,7 +148,7 @@ export default defineComponent({
       focus: props.focus,
       easing: 'linear',
       drag: props.menuDrag,
-      updateOnMove: props.updateOnMove,
+      updateOnMove: true,
       padding: {
         left: props.paddingLeft,
         right: props.paddingRight
