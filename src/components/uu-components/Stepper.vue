@@ -22,8 +22,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue'
+
+export default defineComponent({
   props: {
     value: {
       type: String,
@@ -42,44 +44,56 @@ export default {
       default: '1'
     }
   },
-  data () {
-    return {
-      numValue: parseInt(this.value),
-      numMin: parseInt(this.min),
-      numMax: parseInt(this.max),
-      numStep: parseInt(this.step),
-      minusDeactivate: false,
-      plusDeactivate: false
-    }
-  },
-  mounted () {
-    this.onDeactivate()
-  },
-  methods: {
-    onDecrease () {
-      if (this.numValue > this.numMin) {
-        this.numValue = this.numValue - this.numStep
-      }
-      this.onDeactivate()
-    },
-    onIncrease () {
-      if (this.numValue < this.numMax) {
-        this.numValue = this.numValue + this.numStep
-      }
-      this.onDeactivate()
-    },
-    onDeactivate () {
-      if (this.numValue <= this.numMin) {
-        this.minusDeactivate = true
-      } else if (this.numValue >= this.numMax) {
-        this.plusDeactivate = true
+  setup (props) {
+    const numValue = ref(parseInt(props.value))
+    const numMin = ref(parseInt(props.min))
+    const numMax = ref(parseInt(props.max))
+    const numStep = ref(parseInt(props.step))
+    const minusDeactivate = ref(false)
+    const plusDeactivate = ref(false)
+
+    function onDeactivate () {
+      if (numValue.value <= numMin.value) {
+        minusDeactivate.value = true
+      } else if (numValue.value >= numMax.value) {
+        plusDeactivate.value = true
       } else {
-        this.minusDeactivate = false
-        this.plusDeactivate = false
+        minusDeactivate.value = false
+        plusDeactivate.value = false
       }
+    }
+
+    function onDecrease () {
+      if (numValue.value > numMin.value) {
+        numValue.value = numValue.value - numStep.value
+      }
+      onDeactivate()
+    }
+
+    function onIncrease () {
+      if (numValue.value < numMax.value) {
+        numValue.value = numValue.value + numStep.value
+      }
+      onDeactivate()
+    }
+
+    onMounted(() => {
+      onDeactivate()
+    })
+
+    return {
+      numValue,
+      numMin,
+      numMax,
+      numStep,
+      minusDeactivate,
+      plusDeactivate,
+      onDecrease,
+      onIncrease,
+      onDeactivate
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

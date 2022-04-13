@@ -63,13 +63,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, reactive, ref, onMounted, onUnmounted } from 'vue'
+
 // https://splidejs.com/integration-vue-splide/
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
+import { Splide as SplideClass } from '@splidejs/splide'
+import { Splide as SplideComponent, SplideSlide } from '@splidejs/vue-splide'
 import '@splidejs/splide/dist/css/themes/splide-default.min.css'
-export default {
+
+export default defineComponent({
   components: {
-    Splide,
+    splide: SplideComponent,
     SplideSlide
   },
   props: {
@@ -130,85 +134,115 @@ export default {
       default: true
     }
   },
-  data () {
-    return {
-      // tab menu
-      menu: {
-        type: 'splide',
-        speed: 100,
-        autoWidth: true,
-        isNavigation: true,
-        pagination: false,
-        arrows: false,
-        keyboard: false,
-        start: this.start - 1,
-        focus: this.focus,
-        easing: 'linear',
-        drag: this.menuDrag,
-        updateOnMove: this.updateOnMove,
-        padding: {
-          left: this.paddingLeft,
-          right: this.paddingRight
-        }
-      },
-      // tab content
-      options: {
-        type: 'fade',
-        pagination: false,
-        arrows: false,
-        keyboard: false,
-        start: this.start - 1,
-        drag: this.contDrag
-      },
-      activeSetTimeout: null,
-      tabmenu: null
-    }
-  },
-  mounted () {
-    // Set the sync target.
-    this.$refs.tabcon.sync(this.$refs.tabmenu.splide)
-    this.tabmenu = this.$refs.tabmenu.splide
-    this.$emit('custom', this.tabmenu)
-
-    if (this.activeBar) {
-      // div 만들기
-      var tabmenu = document.querySelector('.' + this.tabName + ' .tab-menu')
-      var newActive = document.createElement('div')
-      tabmenu.appendChild(newActive)
-      newActive.classList.add('active-state')
-
-      // 이벤트 실행
-      this.activeSetTimeout = setTimeout(() => {
-        this.activeBarEvent()
-      }, 300)
-    }
-  },
-  destroyed () {
-    clearTimeout(this.activeSetTimeout)
-    document.body.style = ''
-  },
-  methods: {
-    // active bar
-    activeBarEvent () {
-      this.$emit('tabmoved')
-      if (this.activeBar) {
-        var activeBar = document.querySelector('.' + this.tabName + ' .active-state')
-        var isActive = document.querySelector('.' + this.tabName + ' .splide__slide.is-active .tab-btn')
-        var target = isActive.parentNode
-        var targetLeft = target.offsetLeft + isActive.offsetLeft
-        var targetWidth = isActive.offsetWidth
-        var targetHeight = target.offsetHeight
-        activeBar.style = 'left: ' + targetLeft + 'px;height:' + targetHeight + 'px;width: ' + targetWidth + 'px;opacity: 1;'
+  setup (props, { emit }) {
+    // tab menu
+    const menu = reactive({
+      type: 'slide',
+      speed: 100,
+      autoWidth: true,
+      isNavigation: true,
+      pagination: false,
+      arrows: false,
+      keyboard: false,
+      start: Number(props.start) - 1,
+      focus: props.focus,
+      easing: 'linear',
+      drag: props.menuDrag,
+      updateOnMove: props.updateOnMove,
+      padding: {
+        left: props.paddingLeft,
+        right: props.paddingRight
       }
-    },
-    dragStart () {
-      document.body.style = 'overflow: hidden;'
-    },
-    dragEnd () {
-      document.body.style = ''
+    })
+
+    // tab content
+    const options = reactive({
+      type: 'fade',
+      pagination: false,
+      arrows: false,
+      keyboard: false,
+      start: Number(props.start) - 1,
+      drag: props.contDrag
+    })
+
+    // active bar
+    function activeBarEvent () {
+      emit('tabmoved')
+      if (props.activeBar) {
+        const activeBar = document.querySelector('.' + props.tabName + ' .active-state') as HTMLElement | null
+        const isActive = document.querySelector('.' + props.tabName + ' .splide__slide.is-active .tab-btn') as HTMLElement | null
+        const target = (isActive?.parentNode ?? null) as HTMLElement | null
+
+        if (activeBar === null || isActive === null || target === null) {
+          throw new Error()
+        }
+
+        const targetLeft = target.offsetLeft + isActive.offsetLeft
+        const targetWidth = isActive.offsetWidth
+        const targetHeight = target.offsetHeight
+
+        activeBar.style.left = targetLeft + 'px'
+        activeBar.style.height = targetHeight + 'px'
+        activeBar.style.width = targetWidth + 'px'
+        activeBar.style.opacity = '1'
+      }
+    }
+    function dragStart () {
+      document.body.style.overflow = 'hidden'
+    }
+    function dragEnd () {
+      document.body.style.overflow = ''
+    }
+
+    const activeSetTimeout = ref<number | null>(null)
+    const tabmenu = ref<InstanceType<typeof SplideComponent> | null>(null)
+    const tabcon = ref<InstanceType<typeof SplideComponent> | null>(null)
+    const tabmenuSplide = ref<SplideClass | null>(null)
+
+    onMounted(() => {
+      if (tabmenu.value?.splide === undefined) {
+        return
+      }
+
+      // Set the sync target.
+      tabcon.value?.sync(tabmenu.value?.splide)
+      tabmenuSplide.value = tabmenu.value.splide
+      emit('custom', tabmenuSplide)
+
+      if (props.activeBar) {
+        // div 만들기
+        const tabmenuElement = document.querySelector('.' + props.tabName + ' .tab-menu')
+        const newActive = document.createElement('div')
+        tabmenuElement?.appendChild(newActive)
+        newActive.classList.add('active-state')
+
+        // 이벤트 실행
+        activeSetTimeout.value = setTimeout(() => {
+          activeBarEvent()
+        }, 300)
+      }
+    })
+
+    onUnmounted(() => {
+      if (activeSetTimeout.value !== null) {
+        clearTimeout(activeSetTimeout.value)
+      }
+      document.body.style.overflow = ''
+    })
+
+    return {
+      menu,
+      options,
+      activeBarEvent,
+      dragStart,
+      dragEnd,
+      activeSetTimeout,
+      tabmenu,
+      tabcon,
+      tabmenuSplide
     }
   }
-}
+})
 </script>
 
 <style lang="scss">

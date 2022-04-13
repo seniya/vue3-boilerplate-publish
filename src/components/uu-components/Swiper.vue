@@ -2,33 +2,31 @@
   <div>
     <splide
       ref="splide"
+      :has-track="false"
       :options="slideType"
       :class="[slideType === bullet ? 'bullet': '', classType === 'type3' ? 'type3': '', onlySlide? 'only-slide':'']"
       @splide:moved="$emit('moved')"
       @splide:drag="dragStart"
       @splide:dragged="dragEnd"
     >
-      <splide-slide
-        v-for="item in slideGroup"
-        :key="item.id"
-      >
-        <div
-          class="slide-box"
+      <splide-track>
+        <splide-slide
+          v-for="item in slideGroup"
+          :key="item.id"
         >
-          <slot
-            :name="'slide' + item.id"
+          <div
+            class="slide-box"
           >
-            slide1
-          </slot>
-        </div>
-      </splide-slide>
-      <template
-        v-if="type === 'progress'"
-        v-slot:controls
-      >
-        <div
-          class="splide__progress"
-        >
+            <slot
+              :name="'slide' + item.id"
+            >
+              slide1
+            </slot>
+          </div>
+        </splide-slide>
+      </splide-track>
+      <template v-if="type === 'progress'">
+        <div class="splide__progress">
           <div class="splide__progress__bar" />
         </div>
         <button
@@ -46,12 +44,22 @@
   </div>
 </template>
 
-<script>
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
-export default {
+<script lang="ts">
+import { defineComponent, ref, reactive, onMounted, onUnmounted, Ref, PropType, toRef } from 'vue'
+import { Splide, SplideSlide, SplideTrack, Options as SplideOptions } from '@splidejs/vue-splide'
+import '@splidejs/splide/dist/css/themes/splide-default.min.css'
+import Icon from '@/components/uu-components/Icon.vue'
+
+interface SlideGroup {
+  id: number
+}
+
+export default defineComponent({
   components: {
     Splide,
-    SplideSlide
+    SplideSlide,
+    SplideTrack,
+    'uu-icon': Icon
   },
   props: {
     type: {
@@ -67,8 +75,8 @@ export default {
       default: '100%'
     },
     custom: {
-      type: Object,
-      default: () => {}
+      type: Object as PropType<SplideOptions>,
+      default: () => ({})
     },
     slide: {
       type: String,
@@ -96,7 +104,7 @@ export default {
     },
     gap: {
       type: String,
-      default: '0'
+      default: '0px'
     },
     paddingLeft: {
       type: String,
@@ -111,103 +119,119 @@ export default {
       default: 0
     },
     interval: {
-      type: String,
-      default: '3000'
+      type: Number,
+      default: 3000
     }
   },
-  data () {
-    return {
-      slideType: null,
-      slideGroup: [],
-      slideLength: null,
-      basic: {
-        type: 'slide',
-        fixedWidth: this.width,
-        height: this.height,
-        padding: '2.4rem',
-        gap: '1.6rem',
-        focus: 'center',
-        autoplay: this.auto,
-        interval: 3000,
-        arrows: false,
-        pagination: false
+  setup (props, { emit }) {
+    let slideType: Ref<SplideOptions>
+    const slideGroup = ref<SlideGroup[]>([])
+    const slideLength = ref(-1)
+
+    const basic: SplideOptions = reactive({
+      type: 'slide',
+      fixedWidth: props.width,
+      height: props.height,
+      padding: '2.4rem',
+      gap: '1.6rem',
+      focus: 'center',
+      autoplay: props.auto,
+      interval: 3000,
+      arrows: false,
+      pagination: false
+    })
+
+    const progress: SplideOptions = reactive({
+      type: 'loop',
+      fixedWidth: props.width,
+      height: props.height,
+      arrows: false,
+      pagination: false,
+      autoplay: true,
+      interval: 3000
+    })
+
+    const bullet: SplideOptions = reactive({
+      type: props.mode,
+      width: props.width,
+      height: props.height,
+      arrows: false,
+      autoplay: props.auto,
+      interval: props.interval,
+      gap: props.gap,
+      clones: props.clones,
+      drag: true,
+      waitForTransition: false,
+      padding: {
+        left: props.paddingLeft,
+        right: props.paddingRight
       },
-      progress: {
-        type: 'loop',
-        fixedWidth: this.width,
-        height: this.height,
-        arrows: false,
-        pagination: false,
-        autoplay: true,
-        interval: 3000
-      },
-      bullet: {
-        type: this.mode,
-        width: this.width,
-        height: this.height,
-        arrows: false,
-        autoplay: this.auto,
-        interval: this.interval,
-        gap: this.gap,
-        clones: this.clones,
-        drag: true,
-        waitForTransition: false,
-        padding: {
-          left: this.paddingLeft,
-          right: this.paddingRight
-        },
-        classes: {
-          pagination: 'splide__pagination ' + this.classType + ' ' + this.color + ' ' + this.position,
-          page: 'splide__pagination__page splide-pagination-page'// each button
-        }
-      },
-      swiper: null,
-      onlySlide: false
+      classes: {
+        pagination: 'splide__pagination ' + props.classType + ' ' + props.color + ' ' + props.position,
+        page: 'splide__pagination__page splide-pagination-page'// each button
+      }
+    })
+
+    const swiper = ref(null)
+    const onlySlide = ref(false)
+
+    function dragStart () {
+      document.body.style.overflow = 'hidden'
     }
-  },
-  created () {
+    function dragEnd () {
+      document.body.style.overflow = ''
+    }
+
+    const splide = ref(null)
+    onMounted(() => {
+      emit('event', splide)
+    })
+    onUnmounted(() => {
+      document.body.style.overflow = ''
+    })
+
     // 슬라이드 갯수에 따라 추가
-    this.slideLength = Number(this.slide)
-    for (var i = 0; i < this.slideLength; i++) {
-      var max = this.slideGroup.reduce(function (a, b) {
+    slideLength.value = Number(props.slide)
+    for (let i = 0; i < slideLength.value; i++) {
+      const max = slideGroup.value.reduce(function (a, b) {
         return a > b.id ? a : b.id
       }, 0)
-      this.slideGroup.push({
+      slideGroup.value.push({
         id: max + 1
       })
     }
-    if (this.type === 'basic') {
-      this.slideType = this.basic
-    } else if (this.type === 'progress') {
-      this.slideType = this.progress
-    } else if (this.type === 'bullet') {
-      this.slideType = this.bullet
-    } else if (this.type === 'custom') {
-      this.slideType = this.custom
+    if (props.type === 'basic') {
+      slideType = ref(basic)
+    } else if (props.type === 'progress') {
+      slideType = ref(progress)
+    } else if (props.type === 'bullet') {
+      slideType = ref(bullet)
+    } else if (props.type === 'custom') {
+      slideType = toRef(props, 'custom')
+    } else {
+      throw new Error('slideType 값 유효하지 않음')
     }
-    if (this.slideGroup.length < 2) {
-      this.onlySlide = true
-      this.bullet.drag = false
+
+    if (slideGroup.value.length < 2) {
+      onlySlide.value = true
+      bullet.drag = false
     }
-  },
-  mounted () {
-    this.swiper = this.$refs.splide
-    this.$emit('event', this.swiper)
-  },
-  destroyed () {
-    document.body.style = ''
-  },
-  methods: {
-    dragStart () {
-      document.body.style = 'overflow: hidden;'
-    },
-    dragEnd () {
-      document.body.style = ''
+
+    return {
+      slideType,
+      slideGroup,
+      slideLength,
+      basic,
+      progress,
+      bullet,
+      swiper,
+      onlySlide,
+      dragStart,
+      dragEnd
     }
   }
-}
+})
 </script>
 
 <style lang="scss">
-
 </style>

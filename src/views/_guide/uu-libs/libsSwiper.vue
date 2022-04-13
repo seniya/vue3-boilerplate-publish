@@ -389,55 +389,69 @@ export default {
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, reactive, ref, onMounted } from 'vue'
+import Swiper from '@/components/uu-components/Swiper.vue'
+import { Splide } from '@splidejs/splide'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'
-export default {
-  data () {
-    return {
-      custom: {
-        type: 'slide',
-        width: '100%',
-        height: '10rem',
-        // heightRatio: 0.3, width값에 따라 height가 변함 width의 30% 너비를 높이로..
-        focus: 'center',
-        arrows: false,
-        pagination: false,
-        autoplay: false
-      },
-      custom2: {
-        type: 'slide',
-        width: '100%',
-        heightRatio: 0.3,
-        focus: 'center',
-        arrows: false,
-        pagination: false,
-        autoplay: false
-      },
-      custom3: {
-        type: 'fade',
-        width: '100%',
-        autoHeight: true,
-        focus: 'center',
-        arrows: false,
-        pagination: false,
-        autoplay: false
-      },
-      swiper: null
+
+export default defineComponent({
+  components: {
+    'uu-swiper': Swiper
+  },
+  setup () {
+    const custom = reactive({
+      type: 'slide',
+      width: '100%',
+      height: '10rem',
+      // heightRatio: 0.3, width값에 따라 height가 변함 width의 30% 너비를 높이로..
+      focus: 'center',
+      arrows: false,
+      pagination: false,
+      autoplay: false
+    })
+    const custom2 = reactive({
+      type: 'slide',
+      width: '100%',
+      heightRatio: 0.3,
+      focus: 'center',
+      arrows: false,
+      pagination: false,
+      autoplay: false
+    })
+    const custom3 = reactive({
+      type: 'fade',
+      width: '100%',
+      autoHeight: true,
+      focus: 'center',
+      arrows: false,
+      pagination: false,
+      autoplay: false
+    })
+    const swiper = ref<Splide | null>(null)
+
+    function event (swiperArg: Splide) {
+      swiper.value = swiperArg
     }
-  },
-  mounted () {
-    Prism.highlightAll()
-  },
-  methods: {
-    event (swiper) {
-      this.swiper = swiper
-    },
-    movedEvent () {
-      console.log(this.swiper)
+    function movedEvent () {
+      console.log(swiper.value)
+    }
+
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+
+    return {
+      custom,
+      custom2,
+      custom3,
+      swiper,
+      event,
+      movedEvent
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

@@ -41,17 +41,17 @@
   </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      // alert modal
-      alertModal: true
-    }
-  },
-  methods: {
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  setup () {
+    // alert modal
+    const alertModal = ref(true)
+
+    return { alertModal }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

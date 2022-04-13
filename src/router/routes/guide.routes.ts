@@ -28,10 +28,12 @@ const uuLibsDropdown = (): Promise<typeof import('*.vue')> => import('@/views/_g
 /*
 const uuLibsIcon = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsIcon.vue')
 const uuLibsModal = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsModal.vue')
+*/
 const uuLibsStepper = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsStepper.vue')
 const uuLibsSwiper = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsSwiper.vue')
 const uuLibsTab = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsTab.vue')
 const uuLibsToast = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsToast.vue')
+/*
 const uuLibsToggle = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsToggle.vue')
 const uuLibsToggleText = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsToggleText.vue')
 const uuLibsTooltip = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsTooltip.vue')
@@ -87,14 +89,16 @@ export default {
     { path: '/uu-libs', redirect: '/uu-libs/uuLibsAccordion' },
     { component: uuLibsAccordion, path: '/uu-libs/uuLibsAccordion' },
     { component: uuLibsBubble, path: '/uu-libs/uuLibsBubble' },
-    { component: uuLibsDropdown, path: '/uu-libs/uuLibsDropdown' }
+    { component: uuLibsDropdown, path: '/uu-libs/uuLibsDropdown' },
     /*
     { component: uuLibsIcon, path: '/uu-libs/uuLibsIcon' },
     { component: uuLibsModal, path: '/uu-libs/uuLibsModal' },
+    */
     { component: uuLibsStepper, path: '/uu-libs/uuLibsStepper' },
     { component: uuLibsSwiper, path: '/uu-libs/uuLibsSwiper' },
     { component: uuLibsTab, path: '/uu-libs/uuLibsTab' },
-    { component: uuLibsToast, path: '/uu-libs/uuLibsToast' },
+    { component: uuLibsToast, path: '/uu-libs/uuLibsToast' }
+    /*
     { component: uuLibsToggle, path: '/uu-libs/uuLibsToggle' },
     { component: uuLibsToggleText, path: '/uu-libs/uuLibsToggleText' },
     { component: uuLibsTooltip, path: '/uu-libs/uuLibsTooltip' },

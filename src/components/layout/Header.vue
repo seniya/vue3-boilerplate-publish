@@ -91,8 +91,10 @@
   </header>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   props: {
     back: {
       type: Boolean,
@@ -146,12 +148,8 @@ export default {
       type: String,
       default: ''
     }
-  },
-  data () {
-    return {
-    }
   }
-}
+})
 </script>
 
 <style lang="scss">

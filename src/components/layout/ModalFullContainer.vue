@@ -72,16 +72,17 @@
   </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-    // full modal
-      fullModal: true
-    }
-  }
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 
-}
+export default defineComponent({
+  setup () {
+    // full modal
+    const fullModal = ref(true)
+
+    return { fullModal }
+  }
+})
 </script>
 
 <style lang="scss" scoped>

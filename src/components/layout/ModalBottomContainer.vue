@@ -53,14 +53,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      bottomModal: true
-    }
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  setup () {
+    const bottomModal = ref(true)
+
+    return { bottomModal }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

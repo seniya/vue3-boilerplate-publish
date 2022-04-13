@@ -29,8 +29,10 @@
   </transition>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue'
+
+export default defineComponent({
   props: {
     message: {
       type: String,
@@ -41,29 +43,37 @@ export default {
       default: false
     }
   },
-  data () {
-    return {
-      slide: '',
-      openToast: false,
-      target: null
-    }
-  },
-  mounted () {
-    this.$refs.toast.focus()
-  },
-  methods: {
-    showToast () {
-      this.slide = 'slide-up'
-      this.openToast = !this.openToast
+  setup () {
+    const slide = ref('')
+    const openToast = ref(false)
+    const target = ref(null)
+
+    function showToast () {
+      slide.value = 'slide-up'
+      openToast.value = !openToast.value
       setTimeout(() => {
-        this.openToast = !this.openToast
+        openToast.value = !openToast.value
       }, 3000)
-    },
-    endTransition () {
-      this.slide = 'slide-down'
+    }
+    function endTransition () {
+      slide.value = 'slide-down'
+    }
+
+    const toast = ref<HTMLDivElement | null>(null)
+
+    onMounted(() => {
+      toast.value?.focus()
+    })
+
+    return {
+      slide,
+      openToast,
+      target,
+      showToast,
+      endTransition
     }
   }
-}
+})
 </script>
 
 <style lang="scss">

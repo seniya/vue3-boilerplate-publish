@@ -38,17 +38,21 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, onMounted } from 'vue'
+import Stepper from '@/components/uu-components/Stepper.vue'
 import Prism from 'prismjs'
-export default {
-  data () {
-    return {
-    }
+
+export default defineComponent({
+  components: {
+    'uu-stepper': Stepper
   },
-  mounted () {
-    Prism.highlightAll()
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

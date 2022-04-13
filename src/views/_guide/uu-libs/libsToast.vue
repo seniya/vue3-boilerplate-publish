@@ -86,30 +86,47 @@ export default {
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue'
+import Toast from '@/components/uu-components/Toast.vue'
 import Prism from 'prismjs'
-export default {
-  data () {
-    return {
-      message: '이건 텍스트만 있는 \n토스트입니다.',
-      message2: '이건 버튼이 있는 토스트입니다.'
+
+export default defineComponent({
+  components: {
+    'uu-toast': Toast
+  },
+  setup () {
+    const message = ref('이건 텍스트만 있는 \n토스트입니다.')
+    const message2 = ('이건 버튼이 있는 토스트입니다.')
+
+    const toast = ref<InstanceType<typeof Toast> | null>(null)
+    const toast2 = ref<InstanceType<typeof Toast> | null>(null)
+
+    function open () {
+      toast.value?.showToast()
     }
-  },
-  mounted () {
-    Prism.highlightAll()
-  },
-  methods: {
-    open () {
-      this.$refs.toast.showToast()
-    },
-    btnOpen () {
-      this.$refs.toast2.showToast()
-    },
-    btnEvent () {
+    function btnOpen () {
+      toast2.value?.showToast()
+    }
+    function btnEvent () {
       console.log('btnEvent')
     }
+
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+
+    return {
+      message,
+      message2,
+      toast,
+      toast2,
+      open,
+      btnOpen,
+      btnEvent
+    }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

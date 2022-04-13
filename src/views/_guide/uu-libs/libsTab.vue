@@ -22,52 +22,50 @@
               :class="'type2'"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide3"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭3
+              </template>
+
+              <template v-slot:slide3>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭3
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide4"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭44444
+              </template>
+
+              <template v-slot:slide4>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭44444
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -110,52 +108,48 @@
               :cont-drag="false"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide3"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭3
+              </template>
+              <template v-slot:slide3>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭3
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide4"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭44444
+              </template>
+              <template v-slot:slide4>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭44444
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -221,40 +215,36 @@
               :cont-drag="false"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide3"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭3
+              </template>
+              <template v-slot:slide3>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭3
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide4"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭44444
+              </template>
+              <template v-slot:slide4>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭44444
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -294,40 +284,36 @@
               :cont-drag="false"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide3"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭3
+              </template>
+              <template v-slot:slide3>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭3
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide4"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭44444
+              </template>
+              <template v-slot:slide4>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭44444
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -368,40 +354,36 @@
               focus="center"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide3"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭3
+              </template>
+              <template v-slot:slide3>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭3
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide4"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭44444
+              </template>
+              <template v-slot:slide4>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭44444
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -440,40 +422,36 @@
               :cont-drag="false"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
-                  탭111<br>
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                    탭111<br>
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide3"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭3
+              </template>
+              <template v-slot:slide3>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭3
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide4"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭44444
+              </template>
+              <template v-slot:slide4>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭44444
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -516,22 +494,20 @@
               :cont-drag="false"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  페이판 탭
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    페이판 탭
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  신한카드 탭
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    신한카드 탭
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -605,38 +581,34 @@
               :cont-drag="false"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide3"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭3
+              </template>
+              <template v-slot:slide3>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭3
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide4"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭44444
+              </template>
+              <template v-slot:slide4>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭44444
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -690,30 +662,27 @@
               :cont-drag="false"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide3"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭3
+              </template>
+              <template v-slot:slide3>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭3
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -766,22 +735,20 @@
               :cont-drag="false"
             >
               <!-- slot 영역 -->
-              <div
-                slot="slide1"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭111<br>
+              <template v-slot:slide1>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭111<br>
+                  </div>
                 </div>
-              </div>
-              <div
-                slot="slide2"
-                class="tab-slot"
-              >
-                <div class="tab-content">
-                  탭22
+              </template>
+              <template v-slot:slide2>
+                <div class="tab-slot">
+                  <div class="tab-content">
+                    탭22
+                  </div>
                 </div>
-              </div>
+              </template>
             </uu-tab>
           </div>
           <div class="view-code">
@@ -820,32 +787,46 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue'
+import Tab from '@/components/uu-components/Tab.vue'
 import Prism from 'prismjs'
-export default {
-  data () {
-    return {
-      search: [
-        {
-          name: '페이판',
-          count: 14
-        },
-        {
-          name: '신한카드',
-          count: 16
-        }
-      ],
-      wallet: ['카드/계좌', '멤버십', '인증', '부가서비스'],
-      wallet2: ['결제', '송금/충전', '대중교통', '입출금'],
-      wallet3: ['결제', '송금/충전', '대중교통'],
-      wallet4: ['등록순', '최신순'],
-      names: []
-    }
+
+export default defineComponent({
+  components: {
+    'uu-tab': Tab
   },
-  mounted () {
-    Prism.highlightAll()
+  setup () {
+    const search = ref([
+      {
+        name: '페이판',
+        count: 14
+      },
+      {
+        name: '신한카드',
+        count: 16
+      }
+    ])
+    const wallet = ref(['카드/계좌', '멤버십', '인증', '부가서비스'])
+    const wallet2 = ref(['결제', '송금/충전', '대중교통', '입출금'])
+    const wallet3 = ref(['결제', '송금/충전', '대중교통'])
+    const wallet4 = ref(['등록순', '최신순'])
+    const names = ref([])
+
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+
+    return {
+      search,
+      wallet,
+      wallet2,
+      wallet3,
+      wallet4,
+      names
+    }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
