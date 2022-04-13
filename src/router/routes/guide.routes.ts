@@ -25,15 +25,12 @@ const basicLibsCard = (): Promise<typeof import('*.vue')> => import('@/views/_gu
 const uuLibsAccordion = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsAccordion.vue')
 const uuLibsBubble = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsBubble.vue')
 const uuLibsDropdown = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsDropdown.vue')
-/*
 const uuLibsIcon = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsIcon.vue')
 const uuLibsModal = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsModal.vue')
-*/
 const uuLibsStepper = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsStepper.vue')
 const uuLibsSwiper = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsSwiper.vue')
 const uuLibsTab = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsTab.vue')
 const uuLibsToast = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsToast.vue')
-/*
 const uuLibsToggle = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsToggle.vue')
 const uuLibsToggleText = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsToggleText.vue')
 const uuLibsTooltip = (): Promise<typeof import('*.vue')> => import('@/views/_guide/uu-libs/libsTooltip.vue')
@@ -48,6 +45,7 @@ const uiLibsBoxList = (): Promise<typeof import('*.vue')> => import('@/views/_gu
 const uiLibsDivArea = (): Promise<typeof import('*.vue')> => import('@/views/_guide/ui-libs/libsDivArea.vue')
 const uiLibsDatePicker = (): Promise<typeof import('*.vue')> => import('@/views/_guide/ui-libs/libsDatePicker.vue')
 const uiLibsGraph = (): Promise<typeof import('*.vue')> => import('@/views/_guide/ui-libs/libsGraph.vue')
+/*
 // 라이브러리
 const libsSwiper = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsSwiper.vue')
 const libsTab = (): Promise<typeof import('*.vue')> => import('@/views/_guide/libs/libsTab.vue')
@@ -90,15 +88,13 @@ export default {
     { component: uuLibsAccordion, path: '/uu-libs/uuLibsAccordion' },
     { component: uuLibsBubble, path: '/uu-libs/uuLibsBubble' },
     { component: uuLibsDropdown, path: '/uu-libs/uuLibsDropdown' },
-    /*
     { component: uuLibsIcon, path: '/uu-libs/uuLibsIcon' },
     { component: uuLibsModal, path: '/uu-libs/uuLibsModal' },
-    */
     { component: uuLibsStepper, path: '/uu-libs/uuLibsStepper' },
     { component: uuLibsSwiper, path: '/uu-libs/uuLibsSwiper' },
     { component: uuLibsTab, path: '/uu-libs/uuLibsTab' },
-    { component: uuLibsToast, path: '/uu-libs/uuLibsToast' }
-    /*
+    { component: uuLibsToast, path: '/uu-libs/uuLibsToast' },
+
     { component: uuLibsToggle, path: '/uu-libs/uuLibsToggle' },
     { component: uuLibsToggleText, path: '/uu-libs/uuLibsToggleText' },
     { component: uuLibsTooltip, path: '/uu-libs/uuLibsTooltip' },
@@ -113,7 +109,8 @@ export default {
     { component: uiLibsTerms, path: '/ui-libs/terms' },
     { component: uiLibsTermsRating, path: '/ui-libs/termsRating' },
     { component: uiLibsDatePicker, path: '/ui-libs/datepicker' },
-    { component: uiLibsGraph, path: '/ui-libs/graph' },
+    { component: uiLibsGraph, path: '/ui-libs/graph' }
+    /*
     // 라이브러리
     { path: '/libs', redirect: '/libs/swiper' },
     { component: libsSwiper, path: '/libs/swiper' },
