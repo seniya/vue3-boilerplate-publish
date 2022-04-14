@@ -331,11 +331,11 @@
                   class="item-area item-flex pl16"
                 >
                   <span class="item-thumbnail navy">
-                    <uu-icon
+                    <!-- <uu-icon
                       icon="card2"
                       size="32"
                       color="white"
-                    />
+                    /> -->
                   </span>
                   <span class="item-bottom">
                     <span class="item-title fw-medium">인기/추천카드</span>
@@ -352,11 +352,11 @@
                   class="item-area item-flex pl34"
                 >
                   <span class="item-thumbnail purple">
-                    <uu-icon
+                    <!-- <uu-icon
                       icon="barcode"
                       size="32"
                       color="white"
-                    />
+                    /> -->
                   </span>
                   <span class="item-bottom">
                     <span class="item-title fw-medium">멀티 멤버십</span>
@@ -372,11 +372,11 @@
                   class="item-area item-flex pl16"
                 >
                   <span class="item-thumbnail navy">
-                    <uu-icon
+                    <!-- <uu-icon
                       icon="card2"
                       size="32"
                       color="white"
-                    />
+                    /> -->
                   </span>
                   <span class="item-bottom">
                     <span class="item-title fw-medium">인기/추천카드</span>
@@ -392,11 +392,11 @@
                   class="item-area item-flex pl34"
                 >
                   <span class="item-thumbnail purple">
-                    <uu-icon
+                    <!-- <uu-icon
                       icon="barcode"
                       size="32"
                       color="white"
-                    />
+                    /> -->
                   </span>
                   <span class="item-bottom">
                     <span class="item-title fw-medium">멀티 멤버십</span>

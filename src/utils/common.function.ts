@@ -21,6 +21,11 @@ export function setObjToUrlParams (
     ? baseUrl + parameters
     : baseUrl.replace(/\/?$/, '?') + parameters
 }
+
+/**
+ * Get Random Id
+  * @returns {string}
+ */
 export function getRandomId () {
   const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'
   const stringLength = 15

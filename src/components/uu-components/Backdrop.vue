@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from '@vue/runtime-core'
+import { computed, defineComponent } from 'vue'
 export default defineComponent({
   props: {
     etarget: {
@@ -45,7 +45,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-
-</style>

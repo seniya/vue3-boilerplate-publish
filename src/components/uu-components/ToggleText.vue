@@ -88,11 +88,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-  // .toggletext {
-  //   &.type4 {
-  //     @include fontHeight(1.6);
-  //   }
-  // }
-</style>

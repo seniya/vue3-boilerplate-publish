@@ -37,7 +37,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-
   props: {
     width: {
       type: String,
@@ -82,6 +81,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss">
-</style>
